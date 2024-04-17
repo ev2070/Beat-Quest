@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_disco_drum",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":65.097145,
+  "name":"snd_disco_drum",
+  "parent":{
+    "name":"Disco",
+    "path":"folders/Sounds/Disco.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_disco_drum.mp3",
+  "type":0,
+  "volume":1.0,
+}
