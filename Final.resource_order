@@ -70,10 +70,11 @@
     {"name":"spr_musicpiece","order":10,"path":"sprites/spr_musicpiece/spr_musicpiece.yy",},
     {"name":"spr_piano","order":9,"path":"sprites/spr_piano/spr_piano.yy",},
     {"name":"spr_player","order":8,"path":"sprites/spr_player/spr_player.yy",},
+    {"name":"spr_singer","order":25,"path":"sprites/spr_singer/spr_singer.yy",},
     {"name":"spr_violin","order":24,"path":"sprites/spr_violin/spr_violin.yy",},
     {"name":"Sprite10","order":9,"path":"sprites/Sprite10/Sprite10.yy",},
-    {"name":"spr_singer","order":25,"path":"sprites/spr_singer/spr_singer.yy",},
     {"name":"Sprite3","order":7,"path":"sprites/Sprite3/Sprite3.yy",},
     {"name":"Sprite9","order":8,"path":"sprites/Sprite9/Sprite9.yy",},
+    {"name":"Untitled_Artwork","order":26,"path":"sprites/Untitled_Artwork/Untitled_Artwork.yy",},
   ],
 }
