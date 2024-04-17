@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_musicpiece_1",
-    "path":"sprites/spr_musicpiece_1/spr_musicpiece_1.yy",
+    "name":"spr_musicpiece",
+    "path":"sprites/spr_musicpiece/spr_musicpiece.yy",
   },
   "spriteMaskId":null,
   "visible":true,
