@@ -6,7 +6,7 @@ instrument_on = false
 
 following = false
 released = false
-
+move_spd = 20
 y_offset = 0
 x_offset = 0
 position_num = 0

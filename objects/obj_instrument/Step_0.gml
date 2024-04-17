@@ -30,7 +30,13 @@ if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0{
 }
 
 if released {
-	if point_distance(x, y, start_x, start_y) > 5
+	//throw and return to start position.
+	x += 10
+	if x > room_width or x < 0 {
+		move_spd *= -1
+	}
+	
+	if point_distance(x, y, start_x, start_y) < 10
 {
     move_towards_point(start_x, start_y, 5);
 }

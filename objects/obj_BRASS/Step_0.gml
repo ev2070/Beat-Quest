@@ -3,3 +3,7 @@
 event_inherited();
 //instrument_on = false
 instrument_type = "BRASS"
+if room = Room_Disco {
+	sprite_index = spr_violin
+}
+else sprite_index = spr_brass
