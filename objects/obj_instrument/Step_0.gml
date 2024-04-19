@@ -18,9 +18,19 @@ if pickup_timer > 0 {
 
 
 if following {
-	x = obj_player.xprevious + x_offset
-	y = obj_player.yprevious + y_offset
+	//x = obj_player.xprevious + x_offset
+	//y = obj_player.yprevious + y_offset
+	
+	if obj_player.move_dir = "right" { x = lerp(x, obj_player.xprevious - (position_num * 50), 0.3);}
+	else if obj_player.move_dir = "left" { x = lerp(x,obj_player.xprevious + (position_num * 50), 0.3);}
+	y = obj_player.yprevious
+	image_xscale = 0.7
+	image_yscale = 0.7
 	instrument_on = true
+}
+else {
+	image_xscale = 1
+	image_yscale = 1
 }
 
 

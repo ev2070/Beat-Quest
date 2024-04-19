@@ -23,8 +23,10 @@ if keyboard_check(vk_down) {
 }
 if keyboard_check(vk_right) {
 	x += move_spd
+	move_dir = "right"
 }
 if keyboard_check(vk_left) {
 	x -= move_spd
+	move_dir = "left"
 }
 

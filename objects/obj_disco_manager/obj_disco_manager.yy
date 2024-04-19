@@ -10,8 +10,8 @@
   "name":"obj_disco_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"song managers",
+    "path":"folders/Objects/song managers.yy",
   },
   "parentObjectId":null,
   "persistent":false,
