@@ -9,11 +9,13 @@ if collision_circle(x,y,16, obj_player,true,true) and pickup_timer = 0 and follo
 	obj_player.collected += 1
 	//array_push(obj_inst_manager.instrument_order,self)
 	position_num = obj_player.collected
+	collided = true
 	}
 
 if pickup_timer > 0 {
 	pickup_timer -= 1
 }
+
 
 if following {
 	x = obj_player.xprevious + x_offset
@@ -21,12 +23,19 @@ if following {
 	instrument_on = true
 }
 
+
+
 if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0{
+	if position_num = 1 {
 	released = true
 	following = false
 	instrument_on = false
 	pickup_timer = pickup_timer_max
 	obj_player.collected -=1
+}
+	else {
+		position_num -= 1
+	}
 }
 
 if released {

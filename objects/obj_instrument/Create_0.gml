@@ -4,6 +4,8 @@ instrument_type = " "
 
 instrument_on = false
 
+collided = false
+
 following = false
 released = false
 move_spd = 20
