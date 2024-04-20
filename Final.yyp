@@ -50,6 +50,7 @@
     {"id":{"name":"obj_happy_manager","path":"objects/obj_happy_manager/obj_happy_manager.yy",},},
     {"id":{"name":"obj_inst_manager","path":"objects/obj_inst_manager/obj_inst_manager.yy",},},
     {"id":{"name":"obj_instrument","path":"objects/obj_instrument/obj_instrument.yy",},},
+    {"id":{"name":"obj_lock_manager","path":"objects/obj_lock_manager/obj_lock_manager.yy",},},
     {"id":{"name":"obJ_music_manager","path":"objects/obJ_music_manager/obJ_music_manager.yy",},},
     {"id":{"name":"obJ_music_manager2","path":"objects/obJ_music_manager2/obJ_music_manager2.yy",},},
     {"id":{"name":"obj_music_note","path":"objects/obj_music_note/obj_music_note.yy",},},
@@ -62,6 +63,7 @@
     {"id":{"name":"Room_jazzrocksomething","path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},},
     {"id":{"name":"Room_SeparateInstrument","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room_Lock","path":"rooms/Room_Lock/Room_Lock.yy",},},
     {"id":{"name":"happysong_bass","path":"sounds/happysong_bass/happysong_bass.yy",},},
     {"id":{"name":"happysong_drums","path":"sounds/happysong_drums/happysong_drums.yy",},},
     {"id":{"name":"happysong_piano","path":"sounds/happysong_piano/happysong_piano.yy",},},
@@ -116,6 +118,7 @@
     {"roomId":{"name":"Room_Disco","path":"rooms/Room_Disco/Room_Disco.yy",},},
     {"roomId":{"name":"Room_Happy","path":"rooms/Room_Happy/Room_Happy.yy",},},
     {"roomId":{"name":"Room_jazzrocksomething","path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},},
+    {"roomId":{"name":"Room_Lock","path":"rooms/Room_Lock/Room_Lock.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
