@@ -2,5 +2,4 @@
 
 randomize();
 
-this_room = Room_SeparateInstrument;
-instructions = "Crack the code";
+instructions = "Crack the code. Press SPACE to proceed (for now)";

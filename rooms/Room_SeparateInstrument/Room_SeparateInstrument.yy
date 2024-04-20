@@ -13,6 +13,7 @@
     {"name":"inst_569DDB2A","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},
     {"name":"inst_297A1D4E","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},
     {"name":"inst_3F5DD327","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},
+    {"name":"inst_2D3C6FD0","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -25,6 +26,7 @@
         {"$GMRInstance":"","%Name":"inst_569DDB2A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_569DDB2A","objectId":{"name":"obj_PIANO","path":"objects/obj_PIANO/obj_PIANO.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":448.0,},
         {"$GMRInstance":"","%Name":"inst_297A1D4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_297A1D4E","objectId":{"name":"obj_GUITAR","path":"objects/obj_GUITAR/obj_GUITAR.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":320.0,},
         {"$GMRInstance":"","%Name":"inst_3F5DD327","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3F5DD327","objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":320.0,},
+        {"$GMRInstance":"","%Name":"inst_2D3C6FD0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D3C6FD0","objectId":{"name":"obj_room_manager","path":"objects/obj_room_manager/obj_room_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1344.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

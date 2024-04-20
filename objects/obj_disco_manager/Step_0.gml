@@ -31,4 +31,6 @@
 if keyboard_check_pressed(vk_enter) {
 	audio_stop_all()
 	room = Room_Disco
+	obj_room_manager.collected_instruments = [];
+	obj_room_manager.position_numbers = [];
 }
