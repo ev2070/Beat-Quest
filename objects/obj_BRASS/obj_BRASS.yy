@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_brass",
-    "path":"sprites/spr_brass/spr_brass.yy",
+    "name":"spr_brass_player",
+    "path":"sprites/spr_brass_player/spr_brass_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,

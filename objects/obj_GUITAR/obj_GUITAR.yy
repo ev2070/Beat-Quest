@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_guitar",
-    "path":"sprites/spr_guitar/spr_guitar.yy",
+    "name":"spr_banjo_player",
+    "path":"sprites/spr_banjo_player/spr_banjo_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,

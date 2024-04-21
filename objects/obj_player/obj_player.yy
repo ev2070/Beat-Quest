@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Untitled_Artwork",
-    "path":"sprites/Untitled_Artwork/Untitled_Artwork.yy",
+    "name":"spr_idle",
+    "path":"sprites/spr_idle/spr_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

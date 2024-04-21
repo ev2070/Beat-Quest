@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bass",
-    "path":"sprites/spr_bass/spr_bass.yy",
+    "name":"spr_bass_player",
+    "path":"sprites/spr_bass_player/spr_bass_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,
