@@ -36,4 +36,8 @@ if (room == Room_Lock) {
 	} else if (global.prev_room == Room_jazzrocksomething) {
 		draw_text_color(room_width*0.7-string_width(riddle3)/2, room_height*0.2-string_height(riddle4)/2, riddle4, c_maroon, c_maroon, c_maroon, c_maroon, 1);
 	}
+	
+	// Show buttons completed
+	var _buttons_completed = string(curr_button_index) + " / " + string(button_seq_length);
+	draw_text(room_width/2-string_width(_buttons_completed)/2, 50, _buttons_completed);
 }

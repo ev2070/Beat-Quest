@@ -1,3 +1,5 @@
+// obj_room_manager Step event
+
 // obj_player can move left or right to return back to previous room
 if (room == Room_Lock) {
 	

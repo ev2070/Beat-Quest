@@ -1,8 +1,7 @@
 // obj_lock_manager Create event
 
 randomize();
-
-instructions = "Crack the code. Press SPACE to proceed (for now)";
+//depth = -1;
 
 riddle1 = "In the band room's ensemble, a melody unfurls.\n" +
 			"With ivory keys and deep, resonant whirls.\n" +
@@ -27,3 +26,37 @@ riddle4 = "Jazzy rock, a mix of styles grand.\n" +
 			"Two deep thumps, then sonata moonlight.\n" +
 			"After that, a bold, brilliant call.\n" +
 			"Finally, a string's dance in the hall.";
+
+curr_button = noone; // What is the current button?
+curr_button_index = 0; // A pointer
+
+buttons = [obj_button1, obj_button2, obj_button3, obj_button4]; // Array of all buttons
+button_sequence = []; // Array of correct button sequence
+button_seq_length = 0; // How many buttons should be in the above sequence?
+
+/*		KEY
+	* button1 : obj_bass sprite
+	* button2 : obj_brass sprite
+	* button3 : obj_guitar sprite
+	* button4 : obj_piano sprite
+*/
+
+if (global.prev_room == Room_SeparateInstrument) {
+	// Piano, Bass, Guitar, Brass, Bass
+	button_sequence = [obj_button4, obj_button1, obj_button3, obj_button2, obj_button1];
+	button_seq_length = 5;
+} else if (global.prev_room == Room_Disco) {
+	// Bass, Strings, Piano, Strings, Guitar, Piano
+	button_sequence = [obj_button1, obj_button2, obj_button4, obj_button2, obj_button3, obj_button4];
+	button_seq_length = 6;
+} else if (global.prev_room == Room_Happy) {
+	//  Brass, Bass, Voice, Piano, Bass, Brass, Voice
+	button_sequence = [obj_button2, obj_button1, obj_button3, obj_button4, obj_button1, obj_button2, obj_button3];
+	button_seq_length = 7;
+} else if (global.prev_room == Room_jazzrocksomething) {
+	// Guitar, Piano, Brass, Bass, Bass, Piano, Brass, Guitar
+	button_sequence = [obj_button3, obj_button4, obj_button2, obj_button1, obj_button1, obj_button4, obj_button2, obj_button3];
+	button_seq_length = 8;
+}
+
+frame_count = 0; // for obj_music_note spawn
