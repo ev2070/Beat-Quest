@@ -3,6 +3,7 @@
 
 if collision_circle(x,y,32,obj_player,true,true) {
 		audio_stop_all()
+		obj_enemy_manager.instrument_list = ["BASS", "BRASS", "GUITAR", "PIANO"]
 		// if room = Room_SeparateInstrument { room = Room_Disco; }
 		if room = Room_SeparateInstrument {
 			global.prev_room = Room_SeparateInstrument;

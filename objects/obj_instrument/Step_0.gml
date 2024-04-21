@@ -50,11 +50,9 @@ if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0{
 
 if released {
 	//throw and return to start position.
-	x += 10
-	if x > room_width or x < 0 {
-		move_spd *= -1
-	}
-	
+	//if obj_player.move_dir = "right" {x += move_spd}
+	//else if obj_player.move_dir = "left"{x -= move_spd}
+	x+=move_spd
 	if point_distance(x, y, start_x, start_y) < 10
 {
     move_towards_point(start_x, start_y, 5);
@@ -64,7 +62,10 @@ else speed = 0;
 }
 
 if x > room_width {
-	x = 0
+	x = 10
+}
+if x < 0 {
+	x = room_width - 10
 }
 /*
 

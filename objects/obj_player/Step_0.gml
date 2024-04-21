@@ -47,10 +47,12 @@ if (room == Room_Lock) {
 	if keyboard_check(vk_right) {
 		x += move_spd
 		move_dir = "right"
+		//image_xscale = 1
 	}
 	if keyboard_check(vk_left) {
 		x -= move_spd
 		move_dir = "left"
+		//image_xscale = -1 //testing
 	}
 	
 	
