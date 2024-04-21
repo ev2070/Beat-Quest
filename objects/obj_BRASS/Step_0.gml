@@ -6,7 +6,7 @@ instrument_type = "BRASS"
 if room = Room_Disco {
 	sprite_index = spr_violin
 }
-else sprite_index = spr_brass
+else sprite_index = spr_brass_player
 
 
 

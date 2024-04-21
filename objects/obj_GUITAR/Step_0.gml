@@ -4,9 +4,9 @@ event_inherited();
 //instrument_on = false
 instrument_type = "GUITAR"
 if room = Room_Happy {
-	sprite_index = spr_singer
+	sprite_index = spr_vocalist
 }
-else sprite_index = spr_guitar
+else sprite_index = spr_banjo_player
 
 
 

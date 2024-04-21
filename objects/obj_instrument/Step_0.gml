@@ -21,9 +21,9 @@ if following {
 	//x = obj_player.xprevious + x_offset
 	//y = obj_player.yprevious + y_offset
 	
-	if obj_player.move_dir = "right" { x = lerp(x, obj_player.xprevious - (position_num * 50), 0.3);}
-	else if obj_player.move_dir = "left" { x = lerp(x,obj_player.xprevious + (position_num * 50), 0.3);}
-	y = obj_player.yprevious
+	if obj_player.move_dir = "right" { x = lerp(x, obj_player.xprevious - (position_num * 55), 0.3);}
+	else if obj_player.move_dir = "left" { x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);}
+	y = lerp(y,obj_player.yprevious, 0.3)
 	image_xscale = 0.7
 	image_yscale = 0.7
 	instrument_on = true
