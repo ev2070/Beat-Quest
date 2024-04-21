@@ -14,7 +14,7 @@ if (room == Room_Lock) {
 	
 	
 	// Lock
-	draw_rectangle_color(room_width*0.475, room_height*0.06, room_width*0.925, room_height*0.7, #2E3192, #2E3192, #2E3192, #2E3192, false);
+	draw_rectangle_color(room_width*0.475, room_height*0.06, room_width*0.925, room_height*0.75, #2E3192, #2E3192, #2E3192, #2E3192, false);
 	
 	// Lock Screen
 	draw_rectangle_color(room_width*0.5, room_height*0.1, room_width*0.9, room_height*0.3, #FF579F, #FF579F, #FF579F, #FF579F, false);

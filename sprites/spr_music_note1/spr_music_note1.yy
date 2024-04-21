@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"music notes",
-    "path":"folders/Sprites/music notes.yy",
+    "name":"spr_music_notes",
+    "path":"folders/Sprites/spr_music_notes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
