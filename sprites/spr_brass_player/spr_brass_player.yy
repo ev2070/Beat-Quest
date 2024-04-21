@@ -14,6 +14,7 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"a8a1321b-c4c8-49ab-ae6c-7816b23864f8","name":"a8a1321b-c4c8-49ab-ae6c-7816b23864f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"54b8d3d5-f541-4fdc-8084-cfadffa8a082","name":"54b8d3d5-f541-4fdc-8084-cfadffa8a082","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"0c11e7c3-2315-4989-bf53-3285c63359ef","name":"0c11e7c3-2315-4989-bf53-3285c63359ef","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"df827234-87c0-49f4-b7fb-5d12a81238cb","name":"df827234-87c0-49f4-b7fb-5d12a81238cb","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -51,7 +52,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":3.0,
+    "length":4.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -61,7 +62,7 @@
     },
     "name":"spr_brass_player",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":5.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -77,8 +78,11 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"54b8d3d5-f541-4fdc-8084-cfadffa8a082","path":"sprites/spr_brass_player/spr_brass_player.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"73724f69-1493-42d1-b0e9-464c3c8a4b51","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0c11e7c3-2315-4989-bf53-3285c63359ef","path":"sprites/spr_brass_player/spr_brass_player.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"50591832-0291-40fd-8bd4-fa0cbf5b7338","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"df827234-87c0-49f4-b7fb-5d12a81238cb","path":"sprites/spr_brass_player/spr_brass_player.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"27259f8d-f3af-4d18-88f6-37d7ce992c75","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"27259f8d-f3af-4d18-88f6-37d7ce992c75","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
