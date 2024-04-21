@@ -18,7 +18,7 @@ if (obj_room_manager.returning) {
 				array_delete(obj_room_manager.collected_instruments, i, 1);
 				
 				position_num = array_find_index(obj_room_manager.position_numbers, function(val) { return val == obj_BASS; }) + 1;
-				if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Happy) {
+				if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
 					//x = obj_door.x-50;
 					y = obj_door.y;
 					following = true;

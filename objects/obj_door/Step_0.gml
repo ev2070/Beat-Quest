@@ -24,10 +24,10 @@ if collision_circle(x,y,32,obj_player,true,true) {
 			}
 		if room = Room_jazzrocksomething { 
 			draw_text(100,100,"rock")
-			room = Room_SeparateInstrument;
-			//global_prev_room = Room_jazzrocksomething;
-			//global.next_room = Room_SeparateInstrument;
-			//room = Room_Lock;
+			//room = Room_SeparateInstrument;
+			global.prev_room = Room_jazzrocksomething;
+			global.next_room = Room_SeparateInstrument;
+			room = Room_Lock;
 			}
 	
 		
