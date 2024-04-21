@@ -31,5 +31,11 @@ if (room == Room_Lock) {
 	
 	if (global.prev_room == Room_SeparateInstrument) {
 		draw_text_color(room_width*0.7-string_width(riddle1)/2, room_height*0.2-string_height(riddle1)/2, riddle1, c_maroon, c_maroon, c_maroon, c_maroon, 1);
+	} else if (global.prev_room == Room_Disco) {
+		draw_text_color(room_width*0.7-string_width(riddle2)/2, room_height*0.2-string_height(riddle2)/2, riddle2, c_maroon, c_maroon, c_maroon, c_maroon, 1);
+	} else if (global.prev_room == Room_Happy) {
+		draw_text_color(room_width*0.7-string_width(riddle3)/2, room_height*0.2-string_height(riddle3)/2, riddle3, c_maroon, c_maroon, c_maroon, c_maroon, 1);
+	} else if (global.prev_room == Room_jazzrocksomething) {
+		draw_text_color(room_width*0.7-string_width(riddle3)/2, room_height*0.2-string_height(riddle4)/2, riddle4, c_maroon, c_maroon, c_maroon, c_maroon, 1);
 	}
 }
