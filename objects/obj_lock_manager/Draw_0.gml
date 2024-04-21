@@ -27,5 +27,9 @@ if (room == Room_Lock) {
 	//draw_rectangle_color(room_width*0.5, room_height*0.2, room_width*0.9, room_height*0.3, #D6F417, #D6F417, #D6F417, #D6F417, true);
 	
 	// Lock Screen Text
-	draw_text_color(room_width*0.7-string_width(instructions)/2, room_height*0.2-string_height(instructions)/2, instructions, c_maroon, c_maroon, c_maroon, c_maroon, 1);
+	//draw_text_color(room_width*0.7-string_width(instructions)/2, room_height*0.2-string_height(instructions)/2, instructions, c_maroon, c_maroon, c_maroon, c_maroon, 1);
+	
+	if (global.prev_room == Room_SeparateInstrument) {
+		draw_text_color(room_width*0.7-string_width(riddle1)/2, room_height*0.2-string_height(riddle1)/2, riddle1, c_maroon, c_maroon, c_maroon, c_maroon, 1);
+	}
 }

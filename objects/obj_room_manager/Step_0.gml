@@ -9,7 +9,6 @@ if (room == Room_Lock) {
 		for (var i = 0; i < array_length(collected_instruments); i++) {
 			array_copy(position_numbers, i, collected_instruments, i, array_length(collected_instruments));
 		}
-		show_debug_message("POS: "+string(position_numbers));
 		returning = true;
 	}
 }
