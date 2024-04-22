@@ -6,17 +6,23 @@ if (room == Room_Lock) {
 	
 	if keyboard_check(ord("D")) {
 		x += move_spd*2
+		move_dir = "right"
+		
 	}
 	if keyboard_check(ord("A")) {
 		x -= move_spd*2
+		move_dir = "left"
+		
 	}
 	if keyboard_check(vk_right) {
 		x += move_spd*2
 		move_dir = "right"
+		
 	}
 	if keyboard_check(vk_left) {
 		x -= move_spd*2
 		move_dir = "left"
+		
 	}
 
 
@@ -32,9 +38,12 @@ if (room == Room_Lock) {
 	}
 	if keyboard_check(ord("D")) {
 		x += move_spd
+		sprite_index = spr_walk_right
+		
 	}
 	if keyboard_check(ord("A")) {
 		x -= move_spd
+		sprite_index = spr_walk_left
 	}
 
 
@@ -49,11 +58,13 @@ if (room == Room_Lock) {
 		x += move_spd
 		move_dir = "right"
 		//image_xscale = 1
+		sprite_index = spr_walk_right
 	}
 	if keyboard_check(vk_left) {
 		x -= move_spd
 		move_dir = "left"
 		//image_xscale = -1 //testing
+		sprite_index = spr_walk_left
 	}
 	
 	
