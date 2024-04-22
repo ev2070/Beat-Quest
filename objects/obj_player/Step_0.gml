@@ -73,3 +73,12 @@ if (room == Room_Lock) {
 	}
 
 }
+var enemy_distance = point_distance(x, y, obj_enemy.x, obj_enemy.y);
+var reset_distance = 100;  
+
+if (enemy_distance < reset_distance) {
+    with (obj_instrument) {
+        event_perform(ev_step, ev_step_normal); 
+    }
+}
+

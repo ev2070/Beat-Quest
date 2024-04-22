@@ -74,3 +74,11 @@ if following and !selected {
 	image_yscale = 0.5
 }
 */
+
+if (instance_exists(obj_enemy) && point_distance(x, y, obj_enemy.x, obj_enemy.y) < reset_distance) {
+    x = start_x;
+    y = start_y;
+    following = false; 
+    instrument_on = false; 
+    
+}

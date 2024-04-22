@@ -18,3 +18,4 @@ start_x = x
 start_y = y
 
 selected = false
+reset_distance = 100;

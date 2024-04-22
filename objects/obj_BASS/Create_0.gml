@@ -4,3 +4,4 @@ event_inherited();
 
 x_offset = 40
 y_offset = 60
+
