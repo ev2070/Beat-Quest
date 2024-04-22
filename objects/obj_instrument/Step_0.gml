@@ -1,4 +1,4 @@
-came/// @description Insert description here
+/// @description Insert description here
 // You can write your code in this editor
 
 if collision_circle(x,y,16, obj_player,true,true) and pickup_timer = 0 and following = false// and keyboard_check_pressed(vk_space)
