@@ -132,6 +132,7 @@
     {"id":{"name":"spr_walk_right","path":"sprites/spr_walk_right/spr_walk_right.yy",},},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
+    {"id":{"name":"spr_piano_player","path":"sprites/spr_piano_player/spr_piano_player.yy",},},
     {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},},
     {"id":{"name":"Untitled_Artwork","path":"sprites/Untitled_Artwork/Untitled_Artwork.yy",},},
   ],

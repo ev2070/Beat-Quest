@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_piano",
-    "path":"sprites/spr_piano/spr_piano.yy",
+    "name":"spr_piano_player",
+    "path":"sprites/spr_piano_player/spr_piano_player.yy",
   },
   "spriteMaskId":null,
   "visible":true,
