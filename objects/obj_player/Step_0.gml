@@ -72,7 +72,7 @@ if (room == Room_Lock) {
 	// If player is returning from Room_Lock, restore game state
 	if (obj_room_manager.returning) {
 		if (room == Room_SeparateInstrument) {
-			x = obj_door.x-70;
+			x = obj_door.x-90;
 		} else if (room == Room_Disco || room == Room_jazzrocksomething) {
 			x = obj_door.x-90;
 		} else if (room == Room_Happy) {
