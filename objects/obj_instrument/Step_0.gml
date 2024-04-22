@@ -21,8 +21,13 @@ if following {
 	//x = obj_player.xprevious + x_offset
 	//y = obj_player.yprevious + y_offset
 	
-	if obj_player.move_dir = "right" { x = lerp(x, obj_player.xprevious - (position_num * 55), 0.3);}
-	else if obj_player.move_dir = "left" { x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);}
+	if obj_player.move_dir = "right" { 
+		x = lerp(x, obj_player.xprevious - (position_num * 55), 0.3);
+		x = clamp(x,-50,room_width+30)
+		}
+	else if obj_player.move_dir = "left" {
+		x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);
+		}
 	y = lerp(y,obj_player.yprevious, 0.3)
 	image_xscale = 0.7
 	image_yscale = 0.7
@@ -61,10 +66,10 @@ else speed = 0;
 	//x += 20
 }
 
-if x > room_width {
+if x > room_width + 50{
 	x = 10
 }
-if x < 0 {
+if x < -50 {
 	x = room_width - 10
 }
 /*
@@ -74,11 +79,13 @@ if following and !selected {
 	image_yscale = 0.5
 }
 */
-
+/*
 if (instance_exists(obj_enemy) && point_distance(x, y, obj_enemy.x, obj_enemy.y) < reset_distance) {
     x = start_x;
     y = start_y;
     following = false; 
     instrument_on = false; 
+	obj_instrument.position_num = 0;
+	obj_player.collected =0
     
-}
+}*/

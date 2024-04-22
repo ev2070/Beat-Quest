@@ -22,7 +22,8 @@ if (room == Room_Lock) {
 
 
 } else {
-
+	x = clamp(x,0,room_width)
+	y = clamp(y,0,room_height)
 	if keyboard_check(ord("W")) {
 		y -= move_spd
 	}
@@ -88,8 +89,11 @@ if (enemy_close) {
     with (obj_instrument) {
         x = start_x;
         y = start_y;
+		//reset obj_player's array of collected instrument
+		obj_player.collected = 0
         obj_instrument.following = false;
         obj_instrument.instrument_on = false; 
+		obj_instrument.position_num = 0
     }
 }
 
