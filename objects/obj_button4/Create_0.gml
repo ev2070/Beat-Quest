@@ -2,3 +2,6 @@
 
 snd = snd_button2;
 color = #00E56F; // green
+
+instr = instance_create_depth(x,y,-1,obj_button_instr);
+instr.button_instr = "PIANO";
