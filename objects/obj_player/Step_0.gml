@@ -74,15 +74,23 @@ if (room == Room_Lock) {
 
 }
 if room != Room_Lock {
-	var enemy_distance = point_distance(x, y, obj_enemy.x, obj_enemy.y);
 	var reset_distance = 100;  
+var enemy_close = false;   
 
-	if (enemy_distance < reset_distance) {
-		obj_player.collected = 0
-	    with (obj_instrument) {
-	        event_perform(ev_step, ev_step_normal); 
-			obj_instrument.position_num = 0
-	    }
-	}
+
+with (obj_enemy) {
+    if (point_distance(x, y, other.x, other.y) < reset_distance) {
+        enemy_close = true;
+    }
+}
+
+if (enemy_close) {
+    with (obj_instrument) {
+        x = start_x;
+        y = start_y;
+        obj_instrument.following = false;
+        obj_instrument.instrument_on = false; 
+    }
+}
 
 }
