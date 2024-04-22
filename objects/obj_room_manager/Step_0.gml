@@ -4,6 +4,7 @@
 if (room == Room_Lock) {
 	
 	if (obj_player.x < 0 || obj_player.x > room_width) {
+		audio_stop_all();
 	    room = global.prev_room;
 		//for (var i = 0; i < array_length(collected_instruments); i++) {
 		//    deep_copy[i] = array_copy(original_array[i]);

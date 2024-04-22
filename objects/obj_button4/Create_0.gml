@@ -1,1 +1,4 @@
-// obj_button1 Create event
+// obj_button4 Create event
+
+snd = snd_button2;
+color = #00E56F; // green

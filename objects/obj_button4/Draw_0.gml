@@ -1,3 +1,3 @@
-// obj_button1 Draw event
+// obj_button4 Draw event
 
 draw_self();

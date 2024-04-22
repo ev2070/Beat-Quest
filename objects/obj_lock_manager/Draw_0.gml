@@ -39,5 +39,8 @@ if (room == Room_Lock) {
 	
 	// Show buttons completed
 	var _buttons_completed = string(curr_button_index) + " / " + string(button_seq_length);
-	draw_text(room_width/2-string_width(_buttons_completed)/2, 50, _buttons_completed);
+	draw_text_color(958-string_width(_buttons_completed)/2, 402-string_height(_buttons_completed)/2, _buttons_completed, #FF579F, #FF579F, #FF579F, #FF579F, 1);
+	
+	// Show what keys correspond to what buttons
+	draw_text_color(410,room_height/10-string_height(instructions)/2,instructions, #00BFF3, #00BFF3, #00BFF3, #00BFF3, 1);
 }

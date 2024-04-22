@@ -1,7 +1,13 @@
 // obj_lock_manager Create event
 
 randomize();
-//depth = -1;
+
+puzzle_theme = -1;
+if (!audio_is_playing(puzzle_theme)) {
+	puzzle_theme = audio_play_sound(snd_puzzle_theme, 1, true);
+}
+
+instructions = "I - RED\nO - GREEN\nK - YELLOW\nL - BLUE";
 
 riddle1 = "In the band room's ensemble, a melody unfurls.\n" +
 			"With ivory keys and deep, resonant whirls.\n" +

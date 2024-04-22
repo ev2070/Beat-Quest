@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_button1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.5,
+  "name":"snd_button1",
+  "parent":{
+    "name":"Lock Sounds",
+    "path":"folders/Sounds/Lock Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_button1.ogg",
+  "type":0,
+  "volume":1.0,
+}
