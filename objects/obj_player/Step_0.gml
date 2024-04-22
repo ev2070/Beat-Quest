@@ -66,7 +66,9 @@ if (room == Room_Lock) {
 		//image_xscale = -1 //testing
 		sprite_index = spr_walk_left
 	}
-	
+	if (keyboard_check(vk_nokey)){
+		sprite_index = spr_idle
+	}
 	
 	
 	// If player is returning from Room_Lock, restore game state
