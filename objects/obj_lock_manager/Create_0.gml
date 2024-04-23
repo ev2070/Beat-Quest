@@ -16,13 +16,17 @@ buttons = [obj_button1, obj_button2, obj_button3, obj_button4]; // Array of all 
 button_sequence = []; // Array of correct button sequence
 button_seq_length = 0; // How many buttons should be in the above sequence?
 
+quaver_start = room_width*0.54; // Where should the quavers start?
+
 /*		KEY
-	* button1 : obj_bass sprite
-	* button2 : obj_brass sprite
-	* button3 : obj_guitar sprite
-	* button4 : obj_piano sprite
+	* button1 : obj_bass sprite : I
+	* button2 : obj_brass sprite : L
+	* button3 : obj_guitar sprite : K
+	* button4 : obj_piano sprite : O
 */
 
+// Set length of the button sequence appropriately
+// Set starting point of the quavers appropriately
 if (global.prev_room == Room_SeparateInstrument1) {
 	button_seq_length = 5;
 } else if (global.prev_room == Room_Disco) {
@@ -33,9 +37,15 @@ if (global.prev_room == Room_SeparateInstrument1) {
 	button_seq_length = 8;
 }
 
+// Generate a random button sequence player must complete
+// Spawn a quaver for each button in the sequence
 for (var _i = 0; _i < button_seq_length; _i++) {
     button_sequence[_i] = buttons[irandom_range(0,3)];
+	var _a_quaver = instance_create_depth(quaver_start+_i*64, room_height*0.2, -1, obj_quaver);
+	// will be adding member variables to obj_quaver and setting them here soon
 }
-show_debug_message(string(button_sequence));
+//show_debug_message(string(button_sequence));
+
+
 
 frame_count = 0; // for obj_semiquaver spawn

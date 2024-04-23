@@ -13,7 +13,6 @@
     {"name":"inst_64D1BA05","path":"rooms/Room_Lock/Room_Lock.yy",},
     {"name":"inst_1A929C86","path":"rooms/Room_Lock/Room_Lock.yy",},
     {"name":"inst_239551D7","path":"rooms/Room_Lock/Room_Lock.yy",},
-    {"name":"inst_72D4FAD7","path":"rooms/Room_Lock/Room_Lock.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -25,7 +24,6 @@
         {"$GMRInstance":"","%Name":"inst_4BE915E8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4BE915E8","objectId":{"name":"obj_button2","path":"objects/obj_button2/obj_button2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1056.0,"y":488.0,},
         {"$GMRInstance":"","%Name":"inst_64D1BA05","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_64D1BA05","objectId":{"name":"obj_button3","path":"objects/obj_button3/obj_button3.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":864.0,"y":488.0,},
         {"$GMRInstance":"","%Name":"inst_1A929C86","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A929C86","objectId":{"name":"obj_button4","path":"objects/obj_button4/obj_button4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1056.0,"y":328.0,},
-        {"$GMRInstance":"","%Name":"inst_72D4FAD7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72D4FAD7","objectId":{"name":"obj_quaver","path":"objects/obj_quaver/obj_quaver.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":32.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
