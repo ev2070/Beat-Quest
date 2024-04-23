@@ -1,4 +1,4 @@
-// obj_music_note Create event
+// obj_semiquavers Create event
 
 randomize();
 

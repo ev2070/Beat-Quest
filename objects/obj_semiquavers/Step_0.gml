@@ -1,4 +1,4 @@
-// obj_music_note Step event
+// obj_semiquavers Step event
 
 image_alpha -= 0.01; // Fade away
 if (image_alpha <= 0) {
