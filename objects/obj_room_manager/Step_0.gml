@@ -6,6 +6,8 @@ if (room == Room_Lock) {
 	if (obj_player.x < 0 || obj_player.x > room_width) {
 		audio_stop_all();
 	    room = global.prev_room;
+		//show_debug_message("Room returning to: " + room_get_name(room));
+		//show_debug_message("Room SUPPOSED: " + room_get_name(global.prev_room));
 		//for (var i = 0; i < array_length(collected_instruments); i++) {
 		//    deep_copy[i] = array_copy(original_array[i]);
 		//}
@@ -18,7 +20,7 @@ if (room == Room_Lock) {
 
 
 
-if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
+if (room == Room_SeparateInstrument1 || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
 	
 	if obj_GUITAR.instrument_on {
 		if (!array_contains(collected_instruments, obj_GUITAR)) {

@@ -47,7 +47,7 @@ button_seq_length = 0; // How many buttons should be in the above sequence?
 	* button4 : obj_piano sprite
 */
 
-if (global.prev_room == Room_SeparateInstrument) {
+if (global.prev_room == Room_SeparateInstrument1) {
 	// Piano, Bass, Guitar, Brass, Bass
 	button_sequence = [obj_button4, obj_button1, obj_button3, obj_button2, obj_button1];
 	button_seq_length = 5;

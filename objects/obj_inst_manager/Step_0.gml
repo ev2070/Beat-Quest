@@ -19,7 +19,7 @@
 
 if keyboard_check_pressed(vk_enter) {
 	audio_stop_all()
-	room = Room_SeparateInstrument
+	room = Room_SeparateInstrument1
 	obj_room_manager.collected_instruments = [];
 	obj_room_manager.position_numbers = [];
 }
