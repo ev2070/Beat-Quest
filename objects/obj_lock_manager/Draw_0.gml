@@ -26,17 +26,6 @@ if (room == Room_Lock) {
 	draw_line_width_color(room_width*0.9, room_height*0.09+1, room_width*0.9, room_height*0.31, room_width/100, #D6F417, #D6F417);
 	//draw_rectangle_color(room_width*0.5, room_height*0.2, room_width*0.9, room_height*0.3, #D6F417, #D6F417, #D6F417, #D6F417, true);
 	
-	// Lock Screen Text
-	if (global.prev_room == Room_SeparateInstrument1) {
-		draw_text_color(room_width*0.7-string_width(riddle1)/2, room_height*0.2-string_height(riddle1)/2, riddle1, c_maroon, c_maroon, c_maroon, c_maroon, 1);
-	} else if (global.prev_room == Room_Disco) {
-		draw_text_color(room_width*0.7-string_width(riddle2)/2, room_height*0.2-string_height(riddle2)/2, riddle2, c_maroon, c_maroon, c_maroon, c_maroon, 1);
-	} else if (global.prev_room == Room_Happy) {
-		draw_text_color(room_width*0.7-string_width(riddle3)/2, room_height*0.2-string_height(riddle3)/2, riddle3, c_maroon, c_maroon, c_maroon, c_maroon, 1);
-	} else if (global.prev_room == Room_jazzrocksomething) {
-		draw_text_color(room_width*0.7-string_width(riddle3)/2, room_height*0.2-string_height(riddle4)/2, riddle4, c_maroon, c_maroon, c_maroon, c_maroon, 1);
-	}
-	
 	// Show buttons completed
 	var _buttons_completed = string(curr_button_index) + " / " + string(button_seq_length);
 	draw_text_color(958-string_width(_buttons_completed)/2, 402-string_height(_buttons_completed)/2, _buttons_completed, #FF579F, #FF579F, #FF579F, #FF579F, 1);

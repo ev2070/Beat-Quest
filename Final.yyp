@@ -77,7 +77,7 @@
     {"id":{"name":"obj_quaver","path":"objects/obj_quaver/obj_quaver.yy",},},
     {"id":{"name":"obj_rock_manager","path":"objects/obj_rock_manager/obj_rock_manager.yy",},},
     {"id":{"name":"obj_room_manager","path":"objects/obj_room_manager/obj_room_manager.yy",},},
-    {"id":{"name":"obj_semiquavers","path":"objects/obj_semiquavers/obj_semiquavers.yy",},},
+    {"id":{"name":"obj_semiquaver","path":"objects/obj_semiquaver/obj_semiquaver.yy",},},
     {"id":{"name":"Room_Disco","path":"rooms/Room_Disco/Room_Disco.yy",},},
     {"id":{"name":"Room_Happy","path":"rooms/Room_Happy/Room_Happy.yy",},},
     {"id":{"name":"Room_jazzrocksomething","path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},},

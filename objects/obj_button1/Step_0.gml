@@ -16,5 +16,5 @@ if (audio_is_playing(snd) && obj_lock_manager.frame_count%2==0) {
 	var _angle = random_range(0, 360);
 	var _note_x = x + lengthdir_x(_radius, _angle);
 	var _note_y = y + lengthdir_y(_radius, _angle);
-	var _note = instance_create_depth(_note_x, _note_y, -1, obj_semiquavers);
+	var _note = instance_create_depth(_note_x, _note_y, -1, obj_semiquaver);
 }

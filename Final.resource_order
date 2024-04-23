@@ -53,7 +53,7 @@
     {"name":"obj_player","order":1,"path":"objects/obj_player/obj_player.yy",},
     {"name":"obj_rock_manager","order":5,"path":"objects/obj_rock_manager/obj_rock_manager.yy",},
     {"name":"obj_room_manager","order":2,"path":"objects/obj_room_manager/obj_room_manager.yy",},
-    {"name":"obj_semiquavers","order":1,"path":"objects/obj_semiquavers/obj_semiquavers.yy",},
+    {"name":"obj_semiquaver","order":1,"path":"objects/obj_semiquaver/obj_semiquaver.yy",},
     {"name":"Room_Disco","order":2,"path":"rooms/Room_Disco/Room_Disco.yy",},
     {"name":"Room_Happy","order":3,"path":"rooms/Room_Happy/Room_Happy.yy",},
     {"name":"Room_jazzrocksomething","order":4,"path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},
