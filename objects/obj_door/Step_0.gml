@@ -6,8 +6,8 @@ if collision_circle(x,y,32,obj_player,true,true) {
 		//show_debug_message("COLLIDING in: "+ room_get_name(room));
 		obj_enemy_manager.instrument_list = ["BASS", "BRASS", "GUITAR", "PIANO"]
 		// if room = Room_SeparateInstrument1 { room = Room_Disco; }
-		if room = Room_SeparateInstrument {
-			global.prev_room = Room_SeparateInstrument;
+		if room = Room_SeparateInstrument1 {
+			global.prev_room = Room_SeparateInstrument1;
 			global.next_room = Room_Disco;
 			//show_debug_message("PREV_ROOM: "+room_get_name(global.prev_room));
 			room = Room_Lock;
@@ -28,7 +28,7 @@ if collision_circle(x,y,32,obj_player,true,true) {
 			draw_text(100,100,"rock")
 			//room = Room_SeparateInstrument1;
 			global.prev_room = Room_jazzrocksomething;
-			global.next_room = Room_SeparateInstrument;
+			global.next_room = Room_SeparateInstrument1;
 			room = Room_Lock;
 			}
 	
