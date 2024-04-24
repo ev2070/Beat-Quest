@@ -86,6 +86,7 @@
     {"id":{"name":"Room_SeparateInstrument","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},},
     {"id":{"name":"Room_SeparateInstrument1","path":"rooms/Room_SeparateInstrument1/Room_SeparateInstrument1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"MoveCollide","path":"scripts/MoveCollide/MoveCollide.yy",},},
     {"id":{"name":"happysong_bass","path":"sounds/happysong_bass/happysong_bass.yy",},},
     {"id":{"name":"happysong_drums","path":"sounds/happysong_drums/happysong_drums.yy",},},
     {"id":{"name":"happysong_piano","path":"sounds/happysong_piano/happysong_piano.yy",},},

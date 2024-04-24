@@ -5,4 +5,33 @@ collected = 0
 move_dir = ""
 
 
+///----Platforming---///
 
+hspd_max = 3.2			// maximum left/right speed
+accel = 0.5			// left/right movement acceleration
+jump_max= 4.5		// strength of upward force
+grav_amt= 0.80			// strength of downward force
+jump_hold = .15 * room_speed	// time you can hold for a higher jump
+num_jump =2		// number of jumps before needing to touch ground
+jump_pressed_timer = 40	// number of frames to save the "jump" input, aka "input caching"
+coyote_time = 5		// number of frames before you fall when stepping off platform
+landsnd = false
+
+//_____________________________________________________________________
+isPlayer = true
+
+#region Do not change these.
+hspd = 0
+vspd = 0
+grounded=false
+just_jumped = false
+jumps_spent = 0
+jump_pressed = false
+x_remainder = 0
+y_remainder = 0
+image_speed=1
+dead = false
+#endregion
+
+start_x = x
+start_y = y

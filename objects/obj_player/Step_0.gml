@@ -106,5 +106,9 @@ if (enemy_close) {
 		obj_instrument.position_num = 0
     }
 }
-
 }
+
+///---Platformer---//
+
+
+
