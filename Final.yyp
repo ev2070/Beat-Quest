@@ -87,6 +87,7 @@
     {"id":{"name":"Room_jazzrocksomething","path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},},
     {"id":{"name":"Room_Lock","path":"rooms/Room_Lock/Room_Lock.yy",},},
     {"id":{"name":"Room_SeparateInstrument","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},},
+    {"id":{"name":"Room_SeparateInstrument1","path":"rooms/Room_SeparateInstrument1/Room_SeparateInstrument1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"MoveCollide","path":"scripts/MoveCollide/MoveCollide.yy",},},
     {"id":{"name":"happysong_bass","path":"sounds/happysong_bass/happysong_bass.yy",},},
@@ -171,6 +172,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"Room_SeparateInstrument1","path":"rooms/Room_SeparateInstrument1/Room_SeparateInstrument1.yy",},},
     {"roomId":{"name":"Room_SeparateInstrument","path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room_Disco","path":"rooms/Room_Disco/Room_Disco.yy",},},
