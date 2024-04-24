@@ -63,7 +63,6 @@
     {"name":"Room_jazzrocksomething","order":4,"path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},
     {"name":"Room_Lock","order":5,"path":"rooms/Room_Lock/Room_Lock.yy",},
     {"name":"Room_SeparateInstrument","order":1,"path":"rooms/Room_SeparateInstrument/Room_SeparateInstrument.yy",},
-    {"name":"Room_SeparateInstrument1","order":6,"path":"rooms/Room_SeparateInstrument1/Room_SeparateInstrument1.yy",},
     {"name":"happysong_drums","order":4,"path":"sounds/happysong_drums/happysong_drums.yy",},
     {"name":"happysong_piano","order":3,"path":"sounds/happysong_piano/happysong_piano.yy",},
     {"name":"happysong_trumpet","order":2,"path":"sounds/happysong_trumpet/happysong_trumpet.yy",},
