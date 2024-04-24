@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_temp_obstacle",
+  "%Name":"obj_collidable",
   "eventList":[],
   "managed":true,
-  "name":"obj_temp_obstacle",
+  "name":"obj_collidable",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_collidable",
-    "path":"objects/obj_collidable/obj_collidable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"Sprite38",
-    "path":"sprites/Sprite38/Sprite38.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

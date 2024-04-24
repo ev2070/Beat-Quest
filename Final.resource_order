@@ -55,6 +55,7 @@
     {"name":"obj_room_manager","order":2,"path":"objects/obj_room_manager/obj_room_manager.yy",},
     {"name":"obj_semiquaver","order":1,"path":"objects/obj_semiquaver/obj_semiquaver.yy",},
     {"name":"obj_temp_obstacle","order":11,"path":"objects/obj_temp_obstacle/obj_temp_obstacle.yy",},
+    {"name":"obj_collidable","order":12,"path":"objects/obj_collidable/obj_collidable.yy",},
     {"name":"Room_Disco","order":2,"path":"rooms/Room_Disco/Room_Disco.yy",},
     {"name":"Room_Happy","order":3,"path":"rooms/Room_Happy/Room_Happy.yy",},
     {"name":"Room_jazzrocksomething","order":4,"path":"rooms/Room_jazzrocksomething/Room_jazzrocksomething.yy",},
