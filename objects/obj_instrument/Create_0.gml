@@ -2,7 +2,7 @@
 // You can write your code in this editor
 instrument_type = " "
 move_dir = "left"
-next = 0
+
 instrument_on = false
 
 collided = false
