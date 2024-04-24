@@ -20,7 +20,7 @@ if (room == Room_Lock) {
 
 
 
-if (room == Room_SeparateInstrument1 || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
+if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
 	
 	if obj_GUITAR.instrument_on {
 		if (!array_contains(collected_instruments, obj_GUITAR)) {
