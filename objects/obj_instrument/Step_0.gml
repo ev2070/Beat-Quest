@@ -28,18 +28,30 @@ if following {
 	//y = obj_player.yprevious + y_offset
 	distance_counter = 0
 	if obj_player.move_dir = "right" { 
-		x = lerp(x, obj_player.xprevious - (position_num * 55), 0.3);
+		x = lerp(x, obj_player.xprevious - (position_num * 55), 0.5);
 		x = clamp(x,-50,room_width+30)
 		}
 	else if obj_player.move_dir = "left" {
-		x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);
+		x = lerp(x,obj_player.xprevious + (position_num * 55), 0.5);
 		}
-	y = lerp(y,obj_player.yprevious, 0.3)
+	if position_num = 1 {
+		y = lerp(y,obj_player.yprevious, 0.3)
+	}
+	else {
+		y = lerp(y,obj_player.yprevious, 0.3)
+		/*with(obj_instrument) {
+			if position_num = 1
+			next = obj_instrument
+		}
+		y = lerp(y,next.yprevious,0.3)
+		*/
+	}
 	image_xscale = 0.7
 	image_yscale = 0.7
 	instrument_on = true
 }
 else {
+	next = 0
 	image_xscale = 1
 	image_yscale = 1
 }
