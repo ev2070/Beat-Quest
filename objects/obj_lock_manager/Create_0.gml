@@ -27,7 +27,7 @@ quaver_start = room_width*0.54; // Where should the quavers start?
 
 // Set length of the button sequence appropriately
 // Set starting point of the quavers appropriately
-if (global.prev_room == Room_SeparateInstrument1) {
+if (global.prev_room == Room_SeparateInstrument) {
 	button_seq_length = 5;
 } else if (global.prev_room == Room_Disco) {
 	button_seq_length = 6;
