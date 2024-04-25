@@ -1,4 +1,9 @@
+// Draw the play button circle
+draw_set_color(c_lime);
+draw_circle(x-1,y-1,radius,false);
+
 /// draw_pie(x, y, value, max, colour, radius, transparency)
+// Source: http://www.davetech.co.uk/gamemakercircularhealthbars
 
 var start_angle = 90; // Starting angle for the pie chart (90 degrees is the top)
 var end_angle = 90 + slice * 120; // Calculate the end angle based on the current slice
@@ -39,3 +44,8 @@ if (progress_fill > 0) {
         draw_primitive_end();
     }
 }
+
+
+// Draw the play button triangle
+draw_set_color(#005678);
+draw_triangle(x - 8, y - 12, x + 12, y, x - 8, y + 12, false);
