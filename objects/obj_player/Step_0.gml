@@ -121,7 +121,7 @@ if room != Room_Lock {
 		} else { 
 			hspd = -hspd_max 
 		}
-	    image_xscale = -1									//flip the sprite to face left
+	   // image_xscale = -1									//flip the sprite to face left
 	    if grounded{
 	        //sprite_index= spr_player_run
 	    }

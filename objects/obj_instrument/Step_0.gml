@@ -34,7 +34,7 @@ if following {
 	else if obj_player.move_dir = "left" {
 		x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);
 		}
-	y = lerp(y,obj_player.yprevious, 0.3)
+	y = lerp(y,obj_player.yprevious-60, 0.3)
 	image_xscale = 0.7
 	image_yscale = 0.7
 	instrument_on = true
