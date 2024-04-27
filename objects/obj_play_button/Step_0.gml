@@ -1,4 +1,6 @@
-if (keyboard_check_pressed(ord("P"))) {
+// obj_play_button Step event
+
+if (keyboard_check_pressed(ord("P")) && !animating) {
     slice += 1;
     if (slice > 3) {
         slice = 0;
@@ -8,8 +10,10 @@ if (keyboard_check_pressed(ord("P"))) {
 
 // Animate the progress
 if (progress < 1) {
+	animating = true;
     progress += anim_speed;
     if (progress > 1) {
+		animating = false;
         progress = 1;
     }
 }

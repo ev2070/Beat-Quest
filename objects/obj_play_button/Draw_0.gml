@@ -1,3 +1,5 @@
+// obj_play_button Draw event
+
 // Draw the play button circle
 draw_set_color(c_lime);
 draw_circle(x-1,y-1,radius,false);
