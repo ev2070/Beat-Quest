@@ -18,6 +18,9 @@ button_seq_length = 0; // How many buttons should be in the above sequence?
 
 quaver_start = room_width*0.54; // Where should the quavers start?
 
+unlocking_mode = false; // Is the player unlocking the lock?
+tries_left = 3;
+
 /*		KEY
 	* button1 : obj_bass sprite : I
 	* button2 : obj_brass sprite : L
@@ -28,13 +31,13 @@ quaver_start = room_width*0.54; // Where should the quavers start?
 // Set length of the button sequence appropriately
 // Set starting point of the quavers appropriately
 if (global.prev_room == Room_SeparateInstrument) {
-	button_seq_length = 5;
+	button_seq_length = 3;
 } else if (global.prev_room == Room_Disco) {
-	button_seq_length = 6;
+	button_seq_length = 4;
 } else if (global.prev_room == Room_Happy) {
-	button_seq_length = 7;
+	button_seq_length = 5;
 } else if (global.prev_room == Room_jazzrocksomething) {
-	button_seq_length = 8;
+	button_seq_length = 6;
 }
 
 // Generate a random button sequence player must complete
