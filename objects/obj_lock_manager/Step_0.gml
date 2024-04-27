@@ -36,18 +36,19 @@ if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
 		if (curr_button_index < button_seq_length) {
 		
 			// If correct button pressed, increment pointer
-			// Else, if you pressed incorrect button, return to global.prev_room
 			if (curr_button == button_sequence[curr_button_index]) {
 		
 				curr_button_index++;
 				curr_button = noone;
 		
-			} else if (curr_button != noone) { // Failed to unlock
+			// If incorrect button pressed, player failed to unlock this time
+			} else if (curr_button != noone) {
 				
 				tries_left--;
 				
+				// If player has no more tries left, return to previous room
 				if (tries_left == 0) {
-			
+
 					audio_stop_all();
 					audio_play_sound(snd_drum_bad,1,false);
 					room = global.prev_room;
@@ -56,13 +57,12 @@ if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
 					}
 					obj_room_manager.returning = true;
 					
+				// If player has some tries left, they can press the play button again
 				} else {
-					
 					audio_play_sound(snd_drum_bad,1,false);
 					curr_button_index = 0;
 					curr_button = noone;
 					unlocking_mode = false;
-					
 				}
 			}
 		

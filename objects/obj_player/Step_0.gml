@@ -106,6 +106,9 @@ if (enemy_close) {
         obj_instrument.following = false;
         obj_instrument.instrument_on = false; 
 		obj_instrument.position_num = 0
+		
+		obj_room_manager.collected_instruments = [];
+		obj_room_manager.position_numbers = [];
     }
 }
 }
