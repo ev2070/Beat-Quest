@@ -48,4 +48,4 @@ if (progress_fill > 0) {
 
 // Draw the play button triangle
 draw_set_color(#005678);
-draw_triangle(x - 8, y - 12, x + 12, y, x - 8, y + 12, false);
+draw_triangle(x - 16, y - 24, x + 24, y, x - 16, y + 24, false);
