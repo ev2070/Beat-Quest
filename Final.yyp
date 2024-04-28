@@ -167,7 +167,7 @@
     {"id":{"name":"spr_walk_right","path":"sprites/spr_walk_right/spr_walk_right.yy",},},
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
-    {"id":{"name":"Sprite38","path":"sprites/Sprite38/Sprite38.yy",},},
+    {"id":{"name":"spr_temp_platform","path":"sprites/spr_temp_platform/spr_temp_platform.yy",},},
     {"id":{"name":"Sprite40","path":"sprites/Sprite40/Sprite40.yy",},},
     {"id":{"name":"disco_platform","path":"sprites/disco_platform/disco_platform.yy",},},
     {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},},
