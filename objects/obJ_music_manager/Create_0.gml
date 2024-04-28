@@ -5,7 +5,7 @@ global.TOTAL_PIECES = 0
 instance_create_depth(100,100,0,obj_player)
 currently_playing = snd_drumBLoop
 
-if room = Room1 {
+if room = Room_rave {
 
 audio_play_sound(snd_drumLoop,1,1)
 audio_play_sound(snd_drumpianoLoop,1,1)
