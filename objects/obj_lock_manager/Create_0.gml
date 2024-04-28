@@ -21,6 +21,11 @@ quaver_start = room_width*0.54; // Where should the quavers start?
 unlocking_mode = false; // Is the player unlocking the lock?
 tries_left = 3;
 
+button1_color = #EE1C24; // "red"
+button2_color = #0039FF; // "blue"
+button3_color = #FFF000; // "yellow"
+button4_color = #00E56F; // "green"
+
 /*		KEY
 	* button1 : obj_bass sprite : I
 	* button2 : obj_brass sprite : L
@@ -44,11 +49,13 @@ if (global.prev_room == Room_SeparateInstrument) {
 // Spawn a quaver for each button in the sequence
 for (var _i = 0; _i < button_seq_length; _i++) {
     button_sequence[_i] = buttons[irandom_range(0,3)];
+	
 	var _a_quaver = instance_create_depth(quaver_start+_i*64, room_height*0.2, -1, obj_quaver);
-	// will be adding member variables to obj_quaver and setting them here soon
+	_a_quaver.quaver_num = _i;
+		 if (button_sequence[_i] == obj_button1) { _a_quaver.quaver_color = button1_color; }
+	else if (button_sequence[_i] == obj_button2) { _a_quaver.quaver_color = button2_color; }
+	else if (button_sequence[_i] == obj_button3) { _a_quaver.quaver_color = button3_color; }
+	else if (button_sequence[_i] == obj_button4) { _a_quaver.quaver_color = button4_color; }
 }
-//show_debug_message(string(button_sequence));
-
-
 
 frame_count = 0; // for obj_semiquaver spawn
