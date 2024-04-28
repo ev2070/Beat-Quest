@@ -39,7 +39,7 @@ if (global.prev_room == Room_SeparateInstrument) {
 	button_seq_length = 3;
 } else if (global.prev_room == Room_Disco) {
 	button_seq_length = 4;
-} else if (global.prev_room == Room_Happy) {
+} else if (global.prev_room == Room_Rave) {
 	button_seq_length = 5;
 } else if (global.prev_room == Room_jazzrocksomething) {
 	button_seq_length = 6;

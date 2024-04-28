@@ -77,7 +77,7 @@ if (room == Room_Lock) {
 	// If player is returning from Room_Lock, restore game state
 	if (obj_room_manager.returning) {
 		
-		if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
+		if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave || room == Room_jazzrocksomething) {
 			x = obj_door.x-sprite_width;
 		}
 		y = obj_door.y;
@@ -102,6 +102,7 @@ if (enemy_close) {
     with (obj_instrument) {
         x = start_x;
         y = start_y;
+		//obj_instrument.returning = true
 		//reset obj_player's array of collected instrument
 		obj_player.collected = 0
         obj_instrument.following = false;
@@ -227,6 +228,19 @@ if room != Room_Lock {
 
 if dead and dead_timer = 0{
 	dead_timer = dead_timer_max
+	with (obj_instrument) {
+        x = start_x;
+        y = start_y;
+		//obj_instrument.returning = true
+		//reset obj_player's array of collected instrument
+		obj_player.collected = 0
+        obj_instrument.following = false;
+        obj_instrument.instrument_on = false; 
+		obj_instrument.position_num = 0
+		
+		obj_room_manager.collected_instruments = [];
+		obj_room_manager.position_numbers = [];
+    }
 }
 if dead_timer > 0 {
 	dead_timer -= 1

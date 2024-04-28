@@ -24,6 +24,7 @@ if release_timer > 0 {
 
 
 if following {
+	returning = false
 	//x = obj_player.xprevious + x_offset
 	//y = obj_player.yprevious + y_offset
 	distance_counter = 0
@@ -90,7 +91,7 @@ if move_spd = 0 {
 
 
 //Bounce back after hitting the wall/obstacle
-if collision_circle(x,y,20,obj_temp_obstacle,false,false) {
+if collision_circle(x,y,20,obj_platform,false,false) {
 	if move_dir = "right" {
 		move_dir = "left"
 	}

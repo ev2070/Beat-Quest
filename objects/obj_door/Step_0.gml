@@ -15,12 +15,12 @@ if collision_circle(x,y,32,obj_player,true,true) {
 		if room = Room_Disco { 
 			draw_text(100,100,"disco")
 			global.prev_room = Room_Disco;
-			global.next_room = Room_Happy
+			global.next_room = Room_Rave
 			room = Room_Lock;
 			}
-		if room = Room_Happy { 
+		if room = Room_Rave { 
 			draw_text(100,100,"rock")
-			global.prev_room = Room_Happy;
+			global.prev_room = Room_Rave;
 			global.next_room = Room_jazzrocksomething;
 			room = Room_Lock;
 			}

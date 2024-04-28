@@ -21,6 +21,6 @@ distance_counter = 0
 start_x = x
 start_y = y
 
-
+returning = false
 selected = false
 reset_distance = 100;

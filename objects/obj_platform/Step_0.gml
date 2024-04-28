@@ -6,4 +6,7 @@ if room = Room_Disco {
 else if room = Room_jazzrocksomething {
 	sprite_index = jazz_platform_beige
 } 
+else if room = Room_Rave {
+	sprite_index = spr_rave_platform
+}
 else sprite_index = spr_temp_platform

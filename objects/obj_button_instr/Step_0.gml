@@ -10,7 +10,7 @@ else if button_instr = "BRASS" {
 	}
 }
 else if button_instr = "GUITAR" {
-	if global.prev_room = Room_Happy {
+	if global.prev_room = Room_Rave {
 		sprite_index = spr_singer
 	}
 	else {

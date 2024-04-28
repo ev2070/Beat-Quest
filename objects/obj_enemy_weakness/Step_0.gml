@@ -11,7 +11,7 @@ else if weakness = "BRASS" {
 	}
 }
 else if weakness = "GUITAR" {
-	if room = Room_Happy {
+	if room = Room_Rave {
 		sprite_index = spr_singer
 	}
 	else {

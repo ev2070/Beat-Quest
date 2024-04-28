@@ -44,7 +44,7 @@
 	}
 //}
 */
-if room = Room_rave {
+if room = Room_rave2 {
 if global.TOTAL_PIECES = 0 {
 		audio_sound_gain(snd_drumLoop, 1, 0.5);
 		audio_sound_gain(snd_drumpianoLoop, 0, 0.1);

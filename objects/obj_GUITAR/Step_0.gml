@@ -3,7 +3,7 @@
 event_inherited();
 //instrument_on = false
 instrument_type = "GUITAR"
-if room = Room_Happy {
+if room = Room_Rave {
 	sprite_index = spr_vocalist
 }
 else sprite_index = spr_banjo_player
@@ -22,7 +22,7 @@ if (obj_room_manager.returning) {
 				array_delete(obj_room_manager.collected_instruments, i, 1);
 				
 				position_num = array_find_index(obj_room_manager.position_numbers, function(val) { return val == obj_GUITAR; }) + 1;
-				if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Happy || room == Room_jazzrocksomething) {
+				if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave || room == Room_jazzrocksomething) {
 					y = obj_door.y;
 					following = true;
 					instrument_on = true;
