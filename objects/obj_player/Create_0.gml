@@ -35,3 +35,6 @@ dead = false
 
 start_x = x
 start_y = y
+
+dead_timer_max = 30
+dead_timer = 0

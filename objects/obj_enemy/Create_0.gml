@@ -10,3 +10,4 @@ var index = irandom(array_length(obj_enemy_manager.instrument_list)-1)
 weakness = obj_enemy_manager.instrument_list[index]
 array_delete(obj_enemy_manager.instrument_list, index, 1)
 my_weakness.weakness = weakness
+returning = false

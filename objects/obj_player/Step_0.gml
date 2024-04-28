@@ -1,6 +1,7 @@
 
 /// @description Insert description here
 // You can write your code in this editor
+if !dead {
 if (room == Room_Lock) {
 	
 	x = clamp(x, -sprite_width, room_width/3);
@@ -219,4 +220,26 @@ if room != Room_Lock {
 	#endregion
 }
 
+	if y > room_height+30 and room != Room_Lock {
+		dead = true
+	}
+}
+
+if dead and dead_timer = 0{
+	dead_timer = dead_timer_max
+}
+if dead_timer > 0 {
+	dead_timer -= 1
+	image_xscale *= 0.9
+	image_yscale *= 0.9
+	image_angle += 15
+}
+if dead_timer = 0  and dead = true {
+	dead = false
+	image_xscale = 1
+	image_yscale = 1
+	image_angle = 0
+	x = start_x
+	y = start_y
+}
 
