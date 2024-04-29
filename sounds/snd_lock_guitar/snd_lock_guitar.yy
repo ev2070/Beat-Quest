@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_button1",
+  "%Name":"snd_lock_guitar",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.5,
-  "name":"snd_button1",
+  "duration":2.400208,
+  "name":"snd_lock_guitar",
   "parent":{
     "name":"Lock Sounds",
     "path":"folders/Sounds/Lock Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_button1.ogg",
+  "soundFile":"snd_lock_guitar.ogg",
   "type":0,
   "volume":1.0,
 }

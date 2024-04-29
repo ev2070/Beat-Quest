@@ -1,6 +1,6 @@
 // obj_lock_manager Step event
 
-if (keyboard_check_pressed(vk_space)) {
+if (keyboard_check_pressed(vk_escape)) {
 	// Must reset these persistent arrays before proceeding to next room!
 	audio_stop_all();
 	obj_room_manager.collected_instruments = [];
