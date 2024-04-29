@@ -181,6 +181,7 @@
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
     {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"Sprite40","path":"sprites/Sprite40/Sprite40.yy",},},
+    {"id":{"name":"spr_temp_instructions","path":"sprites/spr_temp_instructions/spr_temp_instructions.yy",},},
     {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},},
     {"id":{"name":"Untitled_Artwork","path":"sprites/Untitled_Artwork/Untitled_Artwork.yy",},},
   ],

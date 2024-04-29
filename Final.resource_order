@@ -140,6 +140,7 @@
     {"name":"spr_walk_right","order":1,"path":"sprites/spr_walk_right/spr_walk_right.yy",},
     {"name":"Sprite10","order":9,"path":"sprites/Sprite10/Sprite10.yy",},
     {"name":"Sprite40","order":19,"path":"sprites/Sprite40/Sprite40.yy",},
+    {"name":"spr_temp_instructions","order":27,"path":"sprites/spr_temp_instructions/spr_temp_instructions.yy",},
     {"name":"Sprite9","order":8,"path":"sprites/Sprite9/Sprite9.yy",},
     {"name":"Untitled_Artwork","order":10,"path":"sprites/Untitled_Artwork/Untitled_Artwork.yy",},
   ],

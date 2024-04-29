@@ -14,3 +14,21 @@ if instrument.instrument_type = weakness and instrument.released = true {
 	instrument.following = false
 }
 }
+//BASS BRASS GUITAR PIANO
+if weakness = "BASS" {sprite_index = spr_bass_enemy
+	}
+else if weakness = "BRASS" {
+	if room != Room_Disco {
+	sprite_index = spr_brass_enemy
+	}
+}
+else if weakness = "GUITAR" {
+	if room = Room_Rave {
+		sprite_index = spr_singer_enemy
+	}
+	else {
+	sprite_index = spr_banjo_enemy
+	}
+}
+else if weakness = "PIANO" {sprite_index = spr_piano_enemy}
+
