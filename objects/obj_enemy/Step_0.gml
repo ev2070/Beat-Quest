@@ -32,3 +32,21 @@ else if weakness = "GUITAR" {
 }
 else if weakness = "PIANO" {sprite_index = spr_piano_enemy}
 
+//move toward player
+var target_x = obj_player.x;
+var target_y = obj_player.y;
+
+var distance_to_player = point_distance(x, y, target_x, target_y);
+
+if (distance_to_player <= follow_distance) {
+    var move_direction = point_direction(x, y, target_x, target_y);
+
+    x += lengthdir_x(move_spd, move_direction);
+    y += lengthdir_y(move_spd, move_direction);
+} else {
+    var random_direction = irandom(359);  
+    var random_speed = random_range(1, move_spd);  
+    x += lengthdir_x(random_speed, random_direction);
+    y += lengthdir_y(random_speed, random_direction);
+}
+

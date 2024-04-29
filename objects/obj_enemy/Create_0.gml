@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 
-move_spd = 5
+move_spd = 4
+follow_distance = 1000;
 
 my_weakness = instance_create_depth(x+25,y+20,0,obj_enemy_weakness)
 //choose my weakness
