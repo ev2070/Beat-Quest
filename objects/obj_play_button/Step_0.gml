@@ -1,6 +1,6 @@
 // obj_play_button Step event
 
-if (keyboard_check_pressed(ord("P")) && !animating && !obj_lock_manager.unlocking_mode) {
+if (keyboard_check_pressed(vk_space) && !animating && !obj_lock_manager.unlocking_mode) {
 	playing = true;
     slice += 1;
     if (slice > 3) {
