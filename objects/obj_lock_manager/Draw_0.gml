@@ -24,12 +24,9 @@ if (room == Room_Lock) {
 	draw_line_width_color(room_width*0.5-1, room_height*0.3+1, room_width*0.9, room_height*0.3+1, room_height/60, #D6F417, #D6F417);
 	draw_line_width_color(room_width*0.5, room_height*0.09+1, room_width*0.5, room_height*0.31, room_width/100, #D6F417, #D6F417);
 	draw_line_width_color(room_width*0.9, room_height*0.09+1, room_width*0.9, room_height*0.31, room_width/100, #D6F417, #D6F417);
-	//draw_rectangle_color(room_width*0.5, room_height*0.2, room_width*0.9, room_height*0.3, #D6F417, #D6F417, #D6F417, #D6F417, true);
 	
 	// Show buttons completed
 	var _buttons_completed = string(curr_button_index) + " / " + string(button_seq_length);
 	draw_text_color(958-string_width(_buttons_completed)/2, 402-string_height(_buttons_completed)/2, _buttons_completed, #FF579F, #FF579F, #FF579F, #FF579F, 1);
-	
-	// Show what keys correspond to what buttons
-	draw_text_color(410,room_height/10-string_height(instructions)/2,instructions, #00BFF3, #00BFF3, #00BFF3, #00BFF3, 1);
+
 }

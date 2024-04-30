@@ -7,8 +7,6 @@ if (!audio_is_playing(puzzle_theme)) {
 	puzzle_theme = audio_play_sound(snd_puzzle_theme, 1, true);
 }
 
-instructions = "I - RED\nO - GREEN\nK - YELLOW\nL - BLUE";
-
 curr_button = noone; // What is the current button?
 curr_button_index = 0; // A pointer
 

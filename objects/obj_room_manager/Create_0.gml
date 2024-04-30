@@ -7,3 +7,5 @@ returning = false;
 
 collected_instruments = [];
 position_numbers = [];
+
+enemies = [];

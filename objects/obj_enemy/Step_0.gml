@@ -6,13 +6,18 @@ my_weakness.y = y-20
 
 //if colliding with the correct instrument, destroy self and drop the instrument
 if place_meeting(x,y,obj_instrument) {
-var instrument = instance_place(x,y,obj_instrument);
-if instrument.instrument_type = weakness and instrument.released = true {
-	instance_destroy(self.my_weakness)
-	instance_destroy(self)
-	instrument.released = false
-	instrument.following = false
-}
+	var instrument = instance_place(x,y,obj_instrument);
+	if instrument.instrument_type = weakness and instrument.released = true {
+		
+		if (!array_contains(obj_room_manager.enemies, id)) {
+			array_push(obj_room_manager.enemies, id);
+		}
+		
+		instance_destroy(self.my_weakness)
+		instance_destroy(self)
+		instrument.released = false
+		instrument.following = false
+	}
 }
 //BASS BRASS GUITAR PIANO
 if weakness = "BASS" {sprite_index = spr_bass_enemy
@@ -48,5 +53,13 @@ if (distance_to_player <= follow_distance) {
     var random_speed = random_range(1, move_spd);  
     x += lengthdir_x(random_speed, random_direction);
     y += lengthdir_y(random_speed, random_direction);
+}
+
+// Destroy self and weakness if previously destroyed
+if (obj_room_manager.returning) {
+	if (array_contains(obj_room_manager.enemies, id)) {
+		instance_destroy(self.my_weakness);
+		instance_destroy(self);
+	}
 }
 
