@@ -6,11 +6,6 @@ if (room == Room_Lock) {
 	if (obj_player.x < 0 || obj_player.x > room_width) {
 		audio_stop_all();
 	    room = global.prev_room;
-		//show_debug_message("Room returning to: " + room_get_name(room));
-		//show_debug_message("Room SUPPOSED: " + room_get_name(global.prev_room));
-		//for (var i = 0; i < array_length(collected_instruments); i++) {
-		//    deep_copy[i] = array_copy(original_array[i]);
-		//}
 		for (var i = 0; i < array_length(collected_instruments); i++) {
 			array_copy(position_numbers, i, collected_instruments, i, array_length(collected_instruments));
 		}

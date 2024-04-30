@@ -28,13 +28,6 @@ if (obj_room_manager.returning) {
 		        break;
 		    }
 		}
-		//show_debug_message(string(obj_room_manager.collected_instruments));
-		//show_debug_message(string(array_length(obj_room_manager.collected_instruments)));
 	}
-	// else {
-		// Without this, player doesn't reset near door
-		//obj_player.x = obj_door.x-50;
-		//obj_player.y = obj_door.y;
-	//}
 }
 
