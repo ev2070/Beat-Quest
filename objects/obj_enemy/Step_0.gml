@@ -17,6 +17,7 @@ if place_meeting(x,y,obj_instrument) {
 		instance_destroy(self)
 		instrument.released = false
 		instrument.following = false
+		audio_play_sound(snd_enemy_hit,0,0)
 	}
 }
 //BASS BRASS GUITAR PIANO

@@ -228,6 +228,7 @@ if room != Room_Lock {
 }
 
 if dead and dead_timer = 0{
+	audio_play_sound(snd_fail,0,0)
 	dead_timer = dead_timer_max
 	with (obj_instrument) {
         x = start_x;

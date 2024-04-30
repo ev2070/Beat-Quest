@@ -48,6 +48,7 @@ else {
 
 
 if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0 and release_timer = 0 {
+	audio_play_sound(snd_throw,0,0)
 	release_timer = release_timer_max
 	move_dir = obj_player.move_dir
 	if position_num = 1 {
@@ -91,7 +92,8 @@ if move_spd = 0 {
 }*/
 
 //Bounce back after hitting the wall/obstacle
-if collision_circle(x,y,20,obj_platform,false,false) {
+if collision_circle(x,y,20,obj_platform,false,false) and !following {
+	audio_play_sound(snd_bounce,0,0)
 	if move_dir = "right" {
 		move_dir = "left"
 	}
