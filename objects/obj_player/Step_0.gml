@@ -108,6 +108,7 @@ if (enemy_close) {
         obj_instrument.following = false;
         obj_instrument.instrument_on = false; 
 		obj_instrument.position_num = 0
+		obj_instrument.released = false
 		
 		obj_room_manager.collected_instruments = [];
 		obj_room_manager.position_numbers = [];
@@ -256,4 +257,12 @@ if dead_timer = 0  and dead = true {
 	x = start_x
 	y = start_y
 }
+if room != Room_Lock {
+if x < 0 {
+	x = 0
+}
 
+if x > room_width {
+	x = room_width
+}
+}

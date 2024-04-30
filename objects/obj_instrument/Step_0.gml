@@ -80,6 +80,7 @@ if x < -50 {
 
 //projectile moves a  set distance 
 //if it never collides with anything?
+/*
 if distance_counter > 100 {
 	move_spd = lerp(move_spd, 0, 0.5)
 }
@@ -87,8 +88,7 @@ if move_spd = 0 {
 	released = false
 	move_spd = 30
 	distance_counter = 0
-}
-
+}*/
 
 //Bounce back after hitting the wall/obstacle
 if collision_circle(x,y,20,obj_platform,false,false) {
