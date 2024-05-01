@@ -103,6 +103,11 @@ if collision_circle(x,y,20,obj_platform,false,false) and !following {
 	
 }
 
+else if collision_circle(x,y,20,obj_platform,false,false) and following {
+	x = xprevious
+	y = yprevious
+}
+
 
 //Behavior after hitting an enemy?
 
