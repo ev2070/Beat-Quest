@@ -140,6 +140,7 @@
     {"name":"spr_singer","order":9,"path":"sprites/spr_singer/spr_singer.yy",},
     {"name":"spr_temp_instructions","order":27,"path":"sprites/spr_temp_instructions/spr_temp_instructions.yy",},
     {"name":"spr_temp_platform","order":17,"path":"sprites/spr_temp_platform/spr_temp_platform.yy",},
+    {"name":"spr_violin_enemy","order":5,"path":"sprites/spr_violin_enemy/spr_violin_enemy.yy",},
     {"name":"spr_violin_player","order":5,"path":"sprites/spr_violin_player/spr_violin_player.yy",},
     {"name":"spr_violin","order":8,"path":"sprites/spr_violin/spr_violin.yy",},
     {"name":"spr_vocalist","order":3,"path":"sprites/spr_vocalist/spr_vocalist.yy",},
@@ -147,7 +148,7 @@
     {"name":"Sprite10","order":9,"path":"sprites/Sprite10/Sprite10.yy",},
     {"name":"Sprite40","order":19,"path":"sprites/Sprite40/Sprite40.yy",},
     {"name":"Sprite52","order":28,"path":"sprites/Sprite52/Sprite52.yy",},
-    {"name":"spr_violin_enemy","order":5,"path":"sprites/spr_violin_enemy/spr_violin_enemy.yy",},
+    {"name":"spr_player_collision","order":29,"path":"sprites/spr_player_collision/spr_player_collision.yy",},
     {"name":"Sprite9","order":8,"path":"sprites/Sprite9/Sprite9.yy",},
   ],
 }

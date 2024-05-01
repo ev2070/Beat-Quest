@@ -37,6 +37,7 @@ function MoveCollide(){
 	
 	//	screen wrapping
 	//	comment this section out if you don't want that
+	/*
 		if x > room_width{
 		    x = 0
 			x_remainder = 0
@@ -45,6 +46,7 @@ function MoveCollide(){
 		    x = room_width
 			x_remainder = 0
 		}
+		*/
 	//___________________________________________________
 	
 }
