@@ -110,7 +110,7 @@ if (enemy_close) {
 		obj_instrument.position_num = 0
 		obj_instrument.released = false
 		
-		ResetStateArrays(1,1,0);
+		ResetStateArrays(1,1,0,0);
     }
 }
 }
@@ -239,7 +239,7 @@ if dead and dead_timer = 0{
         obj_instrument.instrument_on = false; 
 		obj_instrument.position_num = 0
 		
-		ResetStateArrays(1,1,0);
+		ResetStateArrays(1,1,0,0);
     }
 }
 if dead_timer > 0 {
