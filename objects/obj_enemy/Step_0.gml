@@ -27,6 +27,9 @@ else if weakness = "BRASS" {
 	if room != Room_Disco {
 	sprite_index = spr_brass_enemy
 	}
+	else{
+		sprite_index = spr_violin_enemy
+	}
 }
 else if weakness = "GUITAR" {
 	if room = Room_Rave {

@@ -3,7 +3,7 @@
 if button_instr = "BASS" {sprite_index = spr_bass}
 else if button_instr = "BRASS" {
 	if global.prev_room = Room_Disco {
-		sprite_index = spr_violin
+		sprite_index = spr_violin_player
 	}
 	else {
 	sprite_index = spr_brass

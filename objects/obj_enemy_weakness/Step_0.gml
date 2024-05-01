@@ -4,7 +4,7 @@
 if weakness = "BASS" {sprite_index = spr_bass}
 else if weakness = "BRASS" {
 	if room = Room_Disco {
-		sprite_index = spr_violin
+		sprite_index = spr_violin_player
 	}
 	else {
 	sprite_index = spr_brass
