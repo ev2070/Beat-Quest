@@ -36,6 +36,9 @@
     "name":"spr_temp_platform",
     "path":"sprites/spr_temp_platform/spr_temp_platform.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_temp_platform",
+    "path":"sprites/spr_temp_platform/spr_temp_platform.yy",
+  },
   "visible":true,
 }
