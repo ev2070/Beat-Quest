@@ -42,21 +42,34 @@ else if weakness = "GUITAR" {
 else if weakness = "PIANO" {sprite_index = spr_piano_enemy}
 
 //move toward player
+// Get player's position
 var target_x = obj_player.x;
 var target_y = obj_player.y;
 
+// Calculate distance to player
 var distance_to_player = point_distance(x, y, target_x, target_y);
 
+// Movement decision based on distance to player
 if (distance_to_player <= follow_distance) {
+    // Calculate direction to player
     var move_direction = point_direction(x, y, target_x, target_y);
-
-    x += lengthdir_x(move_spd, move_direction);
-    y += lengthdir_y(move_spd, move_direction);
 } else {
-    var random_direction = irandom(359);  
-    var random_speed = random_range(1, move_spd);  
-    x += lengthdir_x(random_speed, random_direction);
-    y += lengthdir_y(random_speed, random_direction);
+    // Random movement direction
+    var move_direction = irandom(359);
+}
+
+// Calculate potential new positions
+var new_x = x + lengthdir_x(move_spd, move_direction);
+var new_y = y + lengthdir_y(move_spd, move_direction);
+
+// Horizontal collision check
+if (!place_meeting(new_x, y, obj_platform)) {
+    x = new_x;  // Move horizontally if no collision
+} 
+
+// Vertical collision check
+if (!place_meeting(x, new_y, obj_platform)) {
+    y = new_y;  // Move vertically if no collision
 }
 
 // Destroy self and weakness if previously destroyed
