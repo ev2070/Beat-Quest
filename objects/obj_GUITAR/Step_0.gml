@@ -16,9 +16,9 @@ if (obj_room_manager.returning) {
 	// Remove guitar from array, set guitar behavior according to previous room's settings
 	if (array_contains(obj_room_manager.collected_instruments, obj_GUITAR)) {
 		
-		for (var i = 0; i < array_length(obj_room_manager.collected_instruments); i++) {
-		    if (obj_room_manager.collected_instruments[i] == obj_GUITAR) {
-		        
+		for (var i = array_length(obj_room_manager.collected_instruments) - 1; i >= 0; i--) {
+			if (obj_room_manager.collected_instruments[i] == obj_GUITAR) {
+				
 				array_delete(obj_room_manager.collected_instruments, i, 1);
 				
 				position_num = array_find_index(obj_room_manager.position_numbers, function(val) { return val == obj_GUITAR; }) + 1;
@@ -28,8 +28,8 @@ if (obj_room_manager.returning) {
 					instrument_on = true;
 				}
 				obj_player.collected++;
-		        break;
-		    }
+				break;
+			}
 		}
 	}
 }

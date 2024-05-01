@@ -16,9 +16,9 @@ if (obj_room_manager.returning) {
 	// Remove brass from array, set brass behavior according to previous room's settings
 	if (array_contains(obj_room_manager.collected_instruments, obj_BRASS)) {
 		
-		for (var i = 0; i < array_length(obj_room_manager.collected_instruments); i++) {
-		    if (obj_room_manager.collected_instruments[i] == obj_BRASS) {
-		        
+		for (var i = array_length(obj_room_manager.collected_instruments) - 1; i >= 0; i--) {
+			if (obj_room_manager.collected_instruments[i] == obj_BRASS) {
+				
 				array_delete(obj_room_manager.collected_instruments, i, 1);
 				
 				position_num = array_find_index(obj_room_manager.position_numbers, function(val) { return val == obj_BRASS; }) + 1;
@@ -28,8 +28,8 @@ if (obj_room_manager.returning) {
 					instrument_on = true;
 				}
 				obj_player.collected++;
-		        break;
-		    }
+				break;
+			}
 		}
 	}
 }
