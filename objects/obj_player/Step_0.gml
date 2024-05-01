@@ -1,9 +1,6 @@
 
 /// @description Insert description here
 // You can write your code in this editor
-previous_x = x
-previous_y = y
-
 if !dead {
 if (room == Room_Lock) {
 	
@@ -156,7 +153,7 @@ if room != Room_Lock {
 
 	#region jumping and falling
 	
-		if keyboard_check_pressed(vk_up) and isPlayer and can_jump{	// "input caching"
+		if keyboard_check_pressed(vk_up) and isPlayer{	// "input caching"
 			jump_pressed = true
 			landsnd = true
 			alarm[1] = jump_pressed_timer		// saves the key press for some frames
@@ -165,7 +162,6 @@ if room != Room_Lock {
 		}
 
 		if grounded {							// if player is touching the ground or platform
-			can_jump = true
 			vspd = 0							// set our jump value to 0 so we don't move
 	
 		}else{									
@@ -268,14 +264,4 @@ if x < 0 {
 if x > room_width {
 	x = room_width
 }
-}
-
-
-
-if collision_rectangle(bbox_left, bbox_top,bbox_right, bbox_bottom-20,obj_platform,false,true){
-	x = previous_x
-	y = previous_y
-	grounded = false
-	vspd = 0
-	can_jump = false
 }
