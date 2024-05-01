@@ -110,8 +110,7 @@ if (enemy_close) {
 		obj_instrument.position_num = 0
 		obj_instrument.released = false
 		
-		obj_room_manager.collected_instruments = [];
-		obj_room_manager.position_numbers = [];
+		ResetStateArrays();
     }
 }
 }
@@ -240,8 +239,7 @@ if dead and dead_timer = 0{
         obj_instrument.instrument_on = false; 
 		obj_instrument.position_num = 0
 		
-		obj_room_manager.collected_instruments = [];
-		obj_room_manager.position_numbers = [];
+		ResetStateArrays();
     }
 }
 if dead_timer > 0 {
