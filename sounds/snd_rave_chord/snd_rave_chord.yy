@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":24.00653,
+  "duration":24.528,
   "name":"snd_rave_chord",
   "parent":{
     "name":"Rave",

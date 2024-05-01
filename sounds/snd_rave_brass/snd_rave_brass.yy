@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"snd_rave_brass.mp3",
   "type":0,
-  "volume":0.54,
+  "volume":1.0,
 }

@@ -1,6 +1,10 @@
 
 /// @description Insert description here
 // You can write your code in this editor
+previous_x = x
+previous_y = y
+
+
 if !dead {
 if (room == Room_Lock) {
 	
@@ -264,4 +268,12 @@ if x < 0 {
 if x > room_width {
 	x = room_width
 }
+}
+
+if collision_rectangle(bbox_left, bbox_top,bbox_right, bbox_bottom-20,obj_platform,false,true){
+	x = previous_x
+	y = previous_y
+	grounded = false
+	vspd = 0
+	can_jump = false
 }
