@@ -3,7 +3,7 @@
 if (keyboard_check_pressed(vk_escape)) {
 	// Must reset these persistent arrays before proceeding to next room!
 	audio_stop_all();
-	ResetStateArrays();
+	ResetStateArrays(1,1,1);
 	room = global.next_room;
 }
 
@@ -69,7 +69,7 @@ if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
 		} else { // Unlocked next room
 		
 			audio_stop_all();
-			ResetStateArrays();
+			ResetStateArrays(1,1,1);
 			room = global.next_room;
 
 		}
