@@ -2,6 +2,7 @@
 
 randomize();
 
+/*
 curr_button = noone; // What is the current button?
 curr_button_index = 0; // A pointer
 
@@ -17,5 +18,6 @@ tries_left = 3;
 for (var _i = 0; _i < button_seq_length; _i++) {
     button_sequence[_i] = buttons[irandom_range(0,3)];
 }
+*/
 
 frame_count = 0; // for obj_semiquaver spawn

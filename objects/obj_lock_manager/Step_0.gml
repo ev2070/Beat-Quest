@@ -7,6 +7,28 @@ if (keyboard_check_pressed(vk_escape)) {
 	room = global.next_room;
 }
 
+// Create instances of the collected instruments
+if (instance_number(obj_instrument) < array_length(obj_room_manager.collected_instruments)) {
+	for (var _i = 0; _i < array_length(obj_room_manager.collected_instruments); _i++) {
+	    var _an_instrument = obj_room_manager.collected_instruments[_i];
+		//var _instr_x = obj_player.x-obj_player.sprite_width/3*(_i+1);
+		var _instr_x = 0;
+		var _instr_y = 0;
+		var _instr_instance = instance_create_depth(_instr_x, _instr_y, -1, _an_instrument);
+		
+		_instr_instance.following = true
+		_instr_instance.released = false
+		_instr_instance.pickup_timer = _instr_instance.pickup_timer_max
+		obj_player.collected += 1
+		_instr_instance.position_num = obj_player.collected
+		_instr_instance.collided = true
+		
+		obj_player.move_dir = "right"
+		//obj_player.sprite_index = spr_walk_right
+	}
+}
+
+/*
 // Allowed to press a button when there is no current button
 // or when the current button's sound has stopped playing
 // Note: curr_button gets set and a sound plays when user presses a button
@@ -73,5 +95,6 @@ if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
 		}
 	}
 }
+*/
 
 frame_count++;

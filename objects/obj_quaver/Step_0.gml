@@ -4,6 +4,7 @@ if (keyboard_check_pressed(vk_backspace)) {
 	image_blend = quaver_color;
 }
 
+/*
 // If the player successfully presses a button, the corresponding quaver will 
 // turn from dark gray to its corresponding color.
 if (obj_lock_manager.unlocking_mode
@@ -48,3 +49,4 @@ else if (obj_lock_manager.unlocking_mode
 	diry = (diry == 1) ? 1 : -1;
 	y_jitter = random_range(-jitter_amt, jitter_amt);
 }
+*/

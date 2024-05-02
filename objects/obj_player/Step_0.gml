@@ -8,7 +8,8 @@ previous_y = y
 if !dead {
 if (room == Room_Lock) {
 	
-	x = clamp(x, -sprite_width, room_width/3);
+	depth = -2;
+	x = clamp(x, -sprite_width, room_width-sprite_width*0.4);
 	
 	if keyboard_check(ord("D")) {
 		x += move_spd*2
@@ -261,13 +262,13 @@ if dead_timer = 0  and dead = true {
 	y = start_y
 }
 if room != Room_Lock {
-if x < 0 {
-	x = 0
-}
+	if x < 0 {
+		x = 0
+	}
 
-if x > room_width {
-	x = room_width
-}
+	if x > room_width {
+		x = room_width
+	}
 }
 
 if collision_rectangle(bbox_left, bbox_top,bbox_right, bbox_bottom-20,obj_platform,false,true){

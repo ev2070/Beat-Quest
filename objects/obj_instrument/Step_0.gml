@@ -28,16 +28,34 @@ if following {
 	//x = obj_player.xprevious + x_offset
 	//y = obj_player.yprevious + y_offset
 	distance_counter = 0
-	if obj_player.move_dir = "right" { 
-		x = lerp(x, obj_player.xprevious - (position_num * 55), 0.3);
-		x = clamp(x,-50,room_width+30)
-		}
-	else if obj_player.move_dir = "left" {
-		x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);
-		}
-	y = lerp(y,obj_player.yprevious-60, 0.3)
-	image_xscale = 0.7
-	image_yscale = 0.7
+	
+	if room != Room_Lock {
+		if obj_player.move_dir = "right" { 
+			x = lerp(x, obj_player.xprevious - (position_num * 55), 0.3);
+			x = clamp(x,-50,room_width+30)
+			}
+		else if obj_player.move_dir = "left" {
+			x = lerp(x,obj_player.xprevious + (position_num * 55), 0.3);
+			}
+		y = lerp(y,obj_player.yprevious-60, 0.3)
+	} else {
+		if obj_player.move_dir = "right" { 
+			x = lerp(x, obj_player.xprevious - (position_num * 110), 0.3);
+			x = clamp(x,-50,room_width+30)
+			}
+		else if obj_player.move_dir = "left" {
+			x = lerp(x,obj_player.xprevious + (position_num * 110), 0.3);
+			}
+		y = lerp(y,obj_player.yprevious-120, 0.3)
+	}
+	
+	if room != Room_Lock {
+		image_xscale = 0.7
+		image_yscale = 0.7
+	} else { // Instruments will always be following player in Room_Lock
+		image_xscale = 1.4;
+		image_yscale = 1.4;
+	}
 	instrument_on = true
 }
 else {
