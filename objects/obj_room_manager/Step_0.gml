@@ -27,8 +27,6 @@ if (room == Room_Lock) {
 	
 }
 
-
-
 if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave || room == Room_jazzrocksomething) {
 	
 	if obj_GUITAR.instrument_on {
@@ -70,5 +68,27 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 		    lock_combo[_i] = instrs[irandom_range(0,3)];
 		}
 	}
-	
+}
+
+
+// Have collected instruments follow player upon return
+if (returning && array_length(collected_instruments) > 0 && room != Room_Lock) {
+    for (var _i = 0; _i < array_length(collected_instruments); _i++) {
+        
+        if (instance_exists(collected_instruments[_i])) {
+            var _instr_instance = instance_find(collected_instruments[_i], 0); // Find first instance
+            
+            if (_instr_instance != noone) {
+                _instr_instance.following = true;
+                _instr_instance.released = false;
+                _instr_instance.pickup_timer = _instr_instance.pickup_timer_max;
+                obj_player.collected += 1;
+                _instr_instance.position_num = obj_player.collected;
+                _instr_instance.collided = true;
+                obj_player.move_dir = "left";
+                _instr_instance.instrument_on = true;
+            }
+        }
+    }
+    collected_instruments = [];
 }
