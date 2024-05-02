@@ -51,9 +51,7 @@ if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
 					audio_stop_all();
 					audio_play_sound(snd_drum_bad,1,false);
 					room = global.prev_room;
-					for (var i = 0; i < array_length(obj_room_manager.collected_instruments); i++) {
-						array_copy(obj_room_manager.position_numbers, i, obj_room_manager.collected_instruments, i, array_length(obj_room_manager.collected_instruments));
-					}
+					array_copy(obj_room_manager.position_numbers, 0, obj_room_manager.collected_instruments, 0, array_length(obj_room_manager.collected_instruments));
 					obj_room_manager.returning = true;
 					
 				// If player has some tries left, they can press the play button again

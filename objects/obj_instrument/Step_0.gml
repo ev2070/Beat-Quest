@@ -52,11 +52,12 @@ if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0 an
 	release_timer = release_timer_max
 	move_dir = obj_player.move_dir
 	if position_num = 1 {
-	released = true
-	following = false
-	instrument_on = false
-	pickup_timer = pickup_timer_max
-	obj_player.collected -=1
+		released = true
+		following = false
+		instrument_on = false
+		pickup_timer = pickup_timer_max
+		obj_player.collected -=1
+		array_shift(obj_room_manager.collected_instruments);
 	}
 	else {
 		position_num -= 1
