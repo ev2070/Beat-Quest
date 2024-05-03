@@ -27,27 +27,6 @@ if (room == Room_Lock) {
 }
 
 if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave || room == Room_jazzrocksomething) {
-	
-	if obj_GUITAR.instrument_on {
-		if (!array_contains(collected_instruments, obj_GUITAR)) {
-		    array_push(collected_instruments, obj_GUITAR);
-		}
-	}
-	if obj_PIANO.instrument_on {
-		if (!array_contains(collected_instruments, obj_PIANO)) {
-		    array_push(collected_instruments, obj_PIANO);
-		}
-	}
-	if obj_BRASS.instrument_on {
-		if (!array_contains(collected_instruments, obj_BRASS)) {
-		    array_push(collected_instruments, obj_BRASS);
-		}
-	}
-	if obj_BASS.instrument_on {
-		if (!array_contains(collected_instruments, obj_BASS)) {
-		    array_push(collected_instruments, obj_BASS);
-		}
-	}
 
 	if (array_length(lock_combo) == 0 && lock_length == 0) {
 		
@@ -85,7 +64,7 @@ if (returning && array_length(collected_instruments) > 0 && room != Room_Lock) {
                 _instr_instance.position_num = obj_player.collected;
                 _instr_instance.collided = true;
                 obj_player.move_dir = "left";
-                // _instr_instance.instrument_on = true; // must create if statements for this
+                _instr_instance.instrument_on = true;
             }
         }
     }
