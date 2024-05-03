@@ -6,7 +6,6 @@ if (room == Room_Lock) {
 	if (obj_player.x < 0 || obj_player.x > room_width) {
 		audio_stop_all();
 	    room = global.prev_room;
-		array_copy(position_numbers, 0, collected_instruments, 0, array_length(collected_instruments));
 		returning = true;
 	}
 	
@@ -86,7 +85,7 @@ if (returning && array_length(collected_instruments) > 0 && room != Room_Lock) {
                 _instr_instance.position_num = obj_player.collected;
                 _instr_instance.collided = true;
                 obj_player.move_dir = "left";
-                _instr_instance.instrument_on = true;
+                // _instr_instance.instrument_on = true; // must create if statements for this
             }
         }
     }

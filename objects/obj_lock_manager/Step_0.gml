@@ -3,7 +3,7 @@
 if (keyboard_check_pressed(vk_escape)) {
 	// Must reset these persistent arrays before proceeding to next room!
 	audio_stop_all();
-	ResetStateArrays(1,1,1,1);
+	ResetStateArrays(1,1,1);
 	room = global.next_room;
 }
 
@@ -20,6 +20,7 @@ if (instance_number(obj_instrument) < array_length(obj_room_manager.collected_in
 		_instr_instance.position_num = obj_player.collected
 		_instr_instance.collided = true
 		obj_player.move_dir = "right" // Default move_dir
+		_instr_instance.instrument_on = true;
 	}
 }
 
@@ -84,7 +85,7 @@ if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
 		} else { // Unlocked next room
 		
 			audio_stop_all();
-			ResetStateArrays(1,1,1,1);
+			ResetStateArrays(1,1,1);
 			room = global.next_room;
 
 		}
