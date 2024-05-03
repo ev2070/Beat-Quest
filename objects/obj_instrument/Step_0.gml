@@ -65,7 +65,9 @@ else {
 
 
 
-if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0 and release_timer = 0 {
+if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0 and release_timer = 0 
+//and collision_circle(x,y,30,obj_player,true,false)
+{
 	audio_play_sound(snd_throw,0,0)
 	release_timer = release_timer_max
 	move_dir = obj_player.move_dir
