@@ -30,6 +30,6 @@
 
 if keyboard_check_pressed(vk_enter) {
 	audio_stop_all()
-	room = Room_Rave
+	room = Room_Tutorial
 	ResetStateArrays(1,1,1);
 }
