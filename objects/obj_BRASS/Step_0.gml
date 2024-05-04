@@ -6,7 +6,7 @@ instrument_type = "BRASS"
 if room = Room_Disco || global.prev_room == Room_Disco {
 	sprite_index = spr_violin_player
 }
-if room = Room_Rave {
+else sprite_index = spr_brass_player
+if room = Room_Rave  {
 	sprite_index = spr_brass_player
 }
-else sprite_index = spr_brass_player

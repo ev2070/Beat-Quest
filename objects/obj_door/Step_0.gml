@@ -14,6 +14,11 @@ if collision_circle(x,y,32,obj_player,true,true) {
 				obj_room_manager.collected_instruments[_instr_instance.position_num-1] = _instr_instance.object_index;
 			}
 		}
+		if room = Room_Tutorial {
+			global.prev_room = Room_Tutorial;
+			global.next_room = Room_SeparateInstrument;
+			room = Room_SeparateInstrument
+			}
 		
 		if room = Room_SeparateInstrument {
 			global.prev_room = Room_SeparateInstrument;

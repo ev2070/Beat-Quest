@@ -32,7 +32,7 @@ else if weakness = "BRASS" {
 	}
 }
 else if weakness = "GUITAR" {
-	if room = Room_Rave {
+	if room = Room_Rave or room = Room_Tutorial {
 		sprite_index = spr_singer_enemy
 	}
 	else {
@@ -41,46 +41,48 @@ else if weakness = "GUITAR" {
 }
 else if weakness = "PIANO" {sprite_index = spr_piano_enemy}
 
-//move toward player
-// Get player's position
-var target_x = obj_player.x;
-var target_y = obj_player.y;
+if room != Room_Tutorial {
+	//move toward player
+	// Get player's position
+	var target_x = obj_player.x;
+	var target_y = obj_player.y;
 
-// Calculate distance to player
-var distance_to_player = point_distance(x, y, target_x, target_y);
+	// Calculate distance to player
+	var distance_to_player = point_distance(x, y, target_x, target_y);
 
-// Determine movement direction
-var move_direction = distance_to_player <= follow_distance ? point_direction(x, y, target_x, target_y) : irandom(359);
+	// Determine movement direction
+	var move_direction = distance_to_player <= follow_distance ? point_direction(x, y, target_x, target_y) : irandom(359);
 
-// Calculate potential new positions
-var new_x = x + lengthdir_x(move_spd, move_direction);
-var new_y = y + lengthdir_y(move_spd, move_direction);
+	// Calculate potential new positions
+	var new_x = x + lengthdir_x(move_spd, move_direction);
+	var new_y = y + lengthdir_y(move_spd, move_direction);
 
-// Check collision with platforms before moving
-if (!place_meeting(new_x, y, obj_platform)) {
-    x = new_x;  // Allow horizontal movement if no platform collision
-}
-if (!place_meeting(x, new_y, obj_platform)) {
-    y = new_y;  // Allow vertical movement if no platform collision
-}
+	// Check collision with platforms before moving
+	if (!place_meeting(new_x, y, obj_platform)) {
+	    x = new_x;  // Allow horizontal movement if no platform collision
+	}
+	if (!place_meeting(x, new_y, obj_platform)) {
+	    y = new_y;  // Allow vertical movement if no platform collision
+	}
 
-// Apply repulsion from other enemies
-var repulsion_range = 48; // Range of repulsion effect
-var repulsion_force = 0.5; // Strength of the repulsion
-var other_enemy;
+	// Apply repulsion from other enemies
+	var repulsion_range = 48; // Range of repulsion effect
+	var repulsion_force = 0.5; // Strength of the repulsion
+	var other_enemy;
 
-with (obj_enemy) {
-    if (id != other.id && point_distance(x, y, other.x, other.y) < repulsion_range) {
-        var angle = point_direction(x, y, other.x, other.y);
-        var dx = lengthdir_x(repulsion_force, angle);
-        var dy = lengthdir_y(repulsion_force, angle);
+	with (obj_enemy) {
+	    if (id != other.id && point_distance(x, y, other.x, other.y) < repulsion_range) {
+	        var angle = point_direction(x, y, other.x, other.y);
+	        var dx = lengthdir_x(repulsion_force, angle);
+	        var dy = lengthdir_y(repulsion_force, angle);
 
-        // Only apply repulsion if no collision with platforms would occur
-        if (!place_meeting(x - dx, y - dy, obj_platform)) {
-            x -= dx;
-            y -= dy;
-        }
-    }
+	        // Only apply repulsion if no collision with platforms would occur
+	        if (!place_meeting(x - dx, y - dy, obj_platform)) {
+	            x -= dx;
+	            y -= dy;
+	        }
+	    }
+	}
 }
 // Destroy self and weakness if previously destroyed
 if (obj_room_manager.returning) {

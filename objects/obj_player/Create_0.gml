@@ -38,3 +38,8 @@ start_y = y
 
 dead_timer_max = 30
 dead_timer = 0
+
+//text points
+point1 = 3100
+point2 = 600
+point3 = 1000
