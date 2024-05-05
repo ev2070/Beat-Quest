@@ -3,6 +3,9 @@
 randomize();
 
 curr_index = 0;
+failed = false;
+passed = false;
+// pause means processing
 
 /*
 curr_button = noone; // What is the current button?

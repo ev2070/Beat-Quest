@@ -141,7 +141,8 @@ if (room == Room_Lock) {
 		visible = true;
 	}
 	
-	if (x >= obj_open_door.x-obj_open_door.sprite_width*0.5) {
+	if (x <= obj_open_door.x-obj_open_door.sprite_width*0.5 + obj_player.move_spd*0.36 &&
+		x >= obj_open_door.x-obj_open_door.sprite_width*0.5 - obj_player.move_spd*0.36) {
 		obj_room_manager.pause = true;
 	}
 }

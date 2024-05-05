@@ -23,6 +23,21 @@ if (instance_number(obj_instrument) < array_length(obj_room_manager.collected_in
 	}
 }
 
+if (obj_room_manager.pause) {
+	
+	//if (array_length(obj_rock_manager.collected_instruments) == 0) {
+	//	failed = true;
+	//}
+	
+	if (!audio_is_playing(snd_lock_vocals) && !passed) {
+		audio_play_sound(snd_lock_vocals,1,false);
+		passed = true;
+	} else if (!audio_is_playing(snd_lock_vocals) && passed) {
+		passed = false;
+		obj_room_manager.pause = false;
+	}
+}
+
 /*
 // Allowed to press a button when there is no current button
 // or when the current button's sound has stopped playing
