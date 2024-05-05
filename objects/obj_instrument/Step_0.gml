@@ -151,6 +151,15 @@ if (room == Room_Lock) {
 		!obj_lock_manager.failed) {
 		obj_room_manager.pause = true;
 	}
+	
+	// If this instrument is being processed and it's correct, spawn semiquavers
+	if (audio_is_playing(snd_lock_vocals) && object_index == obj_room_manager.lock_combo[obj_lock_manager.curr_index]) {
+		var _radius = 100;
+		var _angle = random_range(0, 360);
+		var _note_x = x + lengthdir_x(_radius, _angle);
+		var _note_y = y + lengthdir_y(_radius, _angle);
+		var _note = instance_create_depth(_note_x, _note_y, -1, obj_semiquaver);
+	}
 }
 
 //Behavior after hitting an enemy?

@@ -8,17 +8,17 @@ rotation_speed = 5;
 scale_direction = 0.01;        // Set the direction and speed of the scaling
 scaling_up = true;             // Set the initial scaling direction
 
-switch (obj_lock_manager.curr_button) {
-	case obj_button1:
+switch (obj_room_manager.lock_combo[obj_lock_manager.curr_index]) {
+	case obj_BASS:
 		sprite_index = spr_music_note1;
 		break;
-	case obj_button2:
+	case obj_BRASS:
 		sprite_index = spr_music_note2;
 		break;
-	case obj_button3:
+	case obj_GUITAR:
 		sprite_index = spr_music_note3;
 		break;
-	case obj_button4:
+	case obj_PIANO:
 		sprite_index = spr_music_note4;
 		break;
 	default:

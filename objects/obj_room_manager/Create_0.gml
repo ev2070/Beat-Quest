@@ -17,6 +17,6 @@ quaver_start = 0;
 instr1_color = #EE1C24; // "red"
 instr2_color = #0039FF; // "blue"
 instr3_color = #FFF000; // "yellow"
-instr4_color = #00E56F; // "green"
+instr4_color = #009900; // "green"
 
 pause = false;
