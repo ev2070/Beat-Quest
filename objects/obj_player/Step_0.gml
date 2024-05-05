@@ -108,8 +108,8 @@ with (obj_enemy) {
 
 if (enemy_close) {
     with (obj_instrument) {
-        x = start_x;
-        y = start_y;
+        x = lerp(x,start_x,0.5);
+        y = lerp(y,start_y,0.5)
 		//obj_instrument.returning = true
 		//reset obj_player's array of collected instrument
 		obj_player.collected = 0
@@ -117,6 +117,7 @@ if (enemy_close) {
         obj_instrument.instrument_on = false; 
 		obj_instrument.position_num = 0
 		obj_instrument.released = false
+		obj_instrument.returning = true;
 		
 		ResetStateArrays(1,0,0);
     }

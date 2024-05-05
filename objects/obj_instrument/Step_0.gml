@@ -11,6 +11,7 @@ if collision_circle(x,y,16, obj_player,true,true) and pickup_timer = 0 and follo
 	//array_push(obj_inst_manager.instrument_order,self)
 	position_num = obj_player.collected
 	collided = true
+	returning = false
 	
 	}
 
@@ -67,14 +68,16 @@ else {
 
 
 
-if keyboard_check_pressed(vk_space) and following = true and pickup_timer = 0 and release_timer = 0 
+if keyboard_check_pressed(vk_space) and following = true and release_timer = 0 
 and !collision_circle(x,y,30,obj_collidable,true,false)
 {
+	returning = false
 	if (room != Room_Lock) {
-		audio_play_sound(snd_throw,0,0)
+		
+		if position_num = 1 {
+			audio_play_sound(snd_throw,0,0)
 		release_timer = release_timer_max
 		move_dir = obj_player.move_dir
-		if position_num = 1 {
 			released = true
 			following = false
 			instrument_on = false
@@ -89,6 +92,7 @@ and !collision_circle(x,y,30,obj_collidable,true,false)
 }
 
 if released {
+	returning = false
 	distance_counter += 1
 	//throw and return to start position.
 	if move_dir = "right" {x += move_spd}
@@ -117,7 +121,7 @@ if move_spd = 0 {
 }*/
 
 //Bounce back after hitting the wall/obstacle
-if collision_circle(x,y,20,obj_platform,false,false) and !following {
+if collision_circle(x,y,20,obj_platform,false,false) and !following and !returning {
 	audio_play_sound(snd_bounce,0,0)
 	if move_dir = "right" {
 		move_dir = "left"
@@ -148,7 +152,6 @@ if (room == Room_Lock) {
 		obj_room_manager.pause = true;
 	}
 }
-
 
 //Behavior after hitting an enemy?
 
