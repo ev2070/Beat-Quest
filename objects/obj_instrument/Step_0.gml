@@ -132,6 +132,15 @@ else if collision_circle(x,y,20,obj_platform,false,false) and following {
 }
 
 
+if (room == Room_Lock) {
+	if (visible && x >= obj_open_door.x) {
+		visible = false;
+	} else if (!visible && x < obj_open_door.x) {
+		visible = true;
+	}
+}
+
+
 //Behavior after hitting an enemy?
 
 

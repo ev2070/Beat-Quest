@@ -14,8 +14,10 @@ if (room == Room_Lock) {
 	x += move_spd
 	move_dir = "right"
 	
-	if (x == obj_open_door.x) {
+	if (visible && x >= obj_open_door.x) {
 		visible = false;
+	} else if (!visible && x < obj_open_door.x) {
+		visible = true;
 	}
 
 
