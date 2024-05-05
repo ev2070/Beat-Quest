@@ -1,7 +1,18 @@
 // obj_room_manager Step event
 
-// obj_player can move left or right to return back to previous room
+if (room == Room_Title) {
+	if (keyboard_check_pressed(vk_enter)){
+		room_goto(Room_Tutorial)
+	}
+}
+
 if (room == Room_Lock) {
+	
+	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
+		audio_stop_all();
+	    room = global.prev_room;
+		returning = true;
+	}
 	
 	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
 		audio_stop_all();
