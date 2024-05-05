@@ -7,7 +7,7 @@ failed = false;
 passed = false;
 succeeded = false;
 
-combo_length = array_length(obj_room_manager.lock_combo);
+combo_length = array_length(global.combo);
 collected_length = array_length(obj_room_manager.collected_instruments);
 
 frame_count = 0; // for obj_semiquaver spawn

@@ -8,7 +8,7 @@ rotation_speed = 5;
 scale_direction = 0.01;        // Set the direction and speed of the scaling
 scaling_up = true;             // Set the initial scaling direction
 
-switch (obj_room_manager.lock_combo[obj_lock_manager.curr_index]) {
+switch (global.combo[obj_lock_manager.curr_index]) {
 	case obj_BASS:
 		sprite_index = spr_music_note1;
 		break;
