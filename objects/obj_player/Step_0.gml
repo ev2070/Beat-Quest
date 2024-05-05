@@ -11,14 +11,26 @@ if (room == Room_Lock) {
 	depth = -2;
 	x = clamp(x, 0, room_width*1.5);
 	
-	if (!obj_room_manager.pause) {
+	if (!obj_room_manager.pause && !obj_lock_manager.failed) {
 		x += move_spd
+		move_dir = "right"
+		sprite_index = spr_walk_right
 	}
-	move_dir = "right"
-	sprite_index = spr_walk_right
+	else if (obj_lock_manager.failed) {
+		x -= move_spd*2;
+		move_dir = "left"
+		sprite_index = spr_walk_left
+	}
 	
 	if (visible && x >= obj_open_door.x) {
 		visible = false;
+		
+		// Player fails is no instruments were collected
+		if (array_length(obj_room_manager.collected_instruments) == 0) {
+			visible = true;
+			obj_lock_manager.failed = true;
+		}
+		
 	} else if (!visible && x < obj_open_door.x) {
 		visible = true;
 	}
