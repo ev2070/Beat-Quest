@@ -25,10 +25,11 @@ if (room == Room_Lock) {
 	if (visible && x >= obj_open_door.x) {
 		visible = false;
 		
-		// Player fails is no instruments were collected
+		// Player fails if no instruments were collected
 		if (array_length(obj_room_manager.collected_instruments) == 0) {
 			visible = true;
 			obj_lock_manager.failed = true;
+			audio_play_sound(snd_drum_bad, 1, false);
 		}
 		
 	} else if (!visible && x < obj_open_door.x) {

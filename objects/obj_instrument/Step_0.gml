@@ -141,8 +141,10 @@ if (room == Room_Lock) {
 		visible = true;
 	}
 	
+	// An instrument will be processed on top of door
 	if (x <= obj_open_door.x-obj_open_door.sprite_width*0.5 + obj_player.move_spd*0.36 &&
-		x >= obj_open_door.x-obj_open_door.sprite_width*0.5 - obj_player.move_spd*0.36) {
+		x >= obj_open_door.x-obj_open_door.sprite_width*0.5 - obj_player.move_spd*0.36 &&
+		!obj_lock_manager.failed) {
 		obj_room_manager.pause = true;
 	}
 }

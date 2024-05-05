@@ -8,8 +8,8 @@ if (keyboard_check_pressed(vk_escape)) {
 }
 
 // Create instances of the collected instruments
-if (instance_number(obj_instrument) < array_length(obj_room_manager.collected_instruments)) {
-	for (var _i = 0; _i < array_length(obj_room_manager.collected_instruments); _i++) {
+if (instance_number(obj_instrument) < collected_length) {
+	for (var _i = 0; _i < collected_length; _i++) {
 		var _instr_instance = instance_create_depth(0, 0, -1, obj_room_manager.collected_instruments[_i]);
 		
 		// Set following behavior
@@ -23,84 +23,56 @@ if (instance_number(obj_instrument) < array_length(obj_room_manager.collected_in
 	}
 }
 
+// Pause to begin processing an instrument
 if (obj_room_manager.pause) {
 	
-	if (!audio_is_playing(snd_lock_vocals) && !passed) {
-		audio_play_sound(snd_lock_vocals,1,false);
-		passed = true;
-	} else if (!audio_is_playing(snd_lock_vocals) && passed) {
-		passed = false;
-		obj_room_manager.pause = false;
-	}
-}
-
-/*
-// Allowed to press a button when there is no current button
-// or when the current button's sound has stopped playing
-// Note: curr_button gets set and a sound plays when user presses a button
-if (curr_button == noone || !audio_is_playing(curr_button.snd)) {
+	// Check if processing is allowed
+	if (!(curr_index < combo_length && curr_index < collected_length)) {
+        obj_room_manager.pause = false;
+        failed = true;
+		audio_play_sound(snd_drum_bad, 1, false);
+    } else {
 	
-	// Play music sequence
-	if (obj_play_button.playing) {
-		if (curr_button_index < button_seq_length && !unlocking_mode) {
-			curr_button = button_sequence[curr_button_index];
-			audio_play_sound(curr_button.snd,1,false);
-			curr_button_index++;
-		}
-	
-		// Music sequence is done so reset the current button and its pointer
-		else if (curr_button_index == button_seq_length && !unlocking_mode) {
-			curr_button_index = 0;
-			curr_button = noone;
-			unlocking_mode = true;
-			obj_play_button.playing = false;
-		}
-	}
-	
-	// Now let the player repeat the music sequence to unlock the next room
-	else if (unlocking_mode) {
-	
-		if (curr_button_index < button_seq_length) {
-		
-			// If correct button pressed, increment pointer
-			if (curr_button == button_sequence[curr_button_index]) {
-		
-				curr_button_index++;
-				curr_button = noone;
-		
-			// If incorrect button pressed, player failed to unlock this time
-			} else if (curr_button != noone) {
+	// Start processing an instrument that has not passed
+		if (!audio_is_playing(snd_lock_vocals) && !passed) {
+			
+			// If the collected instrument matches the one in the lock combo
+			// play correct SFX and set pass.
+			// If this is the last instrument in the combo, player succeeded
+			var _curr_correct_instr = obj_room_manager.lock_combo[curr_index];
+			var _curr_collected_instr = obj_room_manager.collected_instruments[curr_index];
+			
+			if (_curr_collected_instr == _curr_correct_instr) {
 				
-				tries_left--;
-				
-				// If player has no more tries left, return to previous room
-				if (tries_left == 0) {
-
-					audio_stop_all();
-					audio_play_sound(snd_drum_bad,1,false);
-					room = global.prev_room;
-					array_copy(obj_room_manager.position_numbers, 0, obj_room_manager.collected_instruments, 0, array_length(obj_room_manager.collected_instruments));
-					obj_room_manager.returning = true;
-					
-				// If player has some tries left, they can press the play button again
-				} else {
-					audio_play_sound(snd_drum_bad,1,false);
-					curr_button_index = 0;
-					curr_button = noone;
-					unlocking_mode = false;
+				audio_play_sound(snd_lock_vocals,1,false);
+				passed = true;
+				if (combo_length == collected_length && curr_index == obj_room_manager.lock_length-1) {
+						succeeded = true;
 				}
+			
+			// If the collected instrument does not match the one in the lock combo,
+			// the player failed to unlock the next room
+			} else {
+				obj_room_manager.pause = false;
+				failed = true;
+				audio_play_sound(snd_drum_bad, 1, false);
 			}
 		
-		
-		} else { // Unlocked next room
-		
+		// If the player has passed part of the lock combo but not finished it,
+		// processing will continue
+		} else if (!audio_is_playing(snd_lock_vocals) && passed && !succeeded) {
+			passed = false;
+			obj_room_manager.pause = false;
+			curr_index++;
+			
+		// If the player has succeeded, they will unlock the next room
+		} else if (!audio_is_playing(snd_lock_vocals) && passed && succeeded) {
 			audio_stop_all();
 			ResetStateArrays(1,1,1);
 			room = global.next_room;
-
 		}
 	}
 }
-*/
+
 
 frame_count++;
