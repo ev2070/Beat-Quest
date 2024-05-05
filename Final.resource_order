@@ -116,6 +116,7 @@
     {"name":"snd_rave_drums","order":2,"path":"sounds/snd_rave_drums/snd_rave_drums.yy",},
     {"name":"snd_rave_voice","order":4,"path":"sounds/snd_rave_voice/snd_rave_voice.yy",},
     {"name":"snd_throw","order":1,"path":"sounds/snd_throw/snd_throw.yy",},
+    {"name":"snd_jump","order":15,"path":"sounds/snd_jump/snd_jump.yy",},
     {"name":"back","order":2,"path":"sprites/back/back.yy",},
     {"name":"button2","order":1,"path":"sprites/button2/button2.yy",},
     {"name":"button3","order":2,"path":"sprites/button3/button3.yy",},

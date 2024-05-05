@@ -150,6 +150,7 @@
     {"id":{"name":"snd_rave_drums","path":"sounds/snd_rave_drums/snd_rave_drums.yy",},},
     {"id":{"name":"snd_rave_voice","path":"sounds/snd_rave_voice/snd_rave_voice.yy",},},
     {"id":{"name":"snd_throw","path":"sounds/snd_throw/snd_throw.yy",},},
+    {"id":{"name":"snd_jump","path":"sounds/snd_jump/snd_jump.yy",},},
     {"id":{"name":"back","path":"sprites/back/back.yy",},},
     {"id":{"name":"button1","path":"sprites/button1/button1.yy",},},
     {"id":{"name":"button2","path":"sprites/button2/button2.yy",},},
