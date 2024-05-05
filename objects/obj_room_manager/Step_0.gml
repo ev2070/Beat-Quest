@@ -43,8 +43,14 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 		
 		// Generate a random lock combo
 		for (var _i = 0; _i < lock_length; _i++) {
-		    lock_combo[_i] = instrs[irandom_range(0,3)];
+			var _rand_instr = instrs[irandom_range(0,3)];
+			if (!array_contains(lock_combo,_rand_instr)) { // Prevents repeats
+				lock_combo[_i] = _rand_instr;
+			} else { // Stay on this index otherwise
+				_i--;
+			}
 		}
+		//show_debug_message(string(lock_combo))
 	}
 }
 
