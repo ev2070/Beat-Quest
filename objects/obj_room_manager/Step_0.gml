@@ -9,21 +9,6 @@ if (room == Room_Lock) {
 		returning = true;
 	}
 	
-	if (instance_number(obj_quaver) == 0) {
-		
-		// Spawn a quaver for each instrument in the sequence
-		// Set starting point of the quavers appropriately
-		quaver_start = room_width*0.54;
-		for (var _i = 0; _i < lock_length; _i++) {
-			var _a_quaver = instance_create_depth(quaver_start+_i*64, room_height*0.2, -1, obj_quaver);
-			_a_quaver.quaver_num = _i;
-				 if (lock_combo[_i] == obj_BASS)   { _a_quaver.quaver_color = instr1_color; }
-			else if (lock_combo[_i] == obj_BRASS)  { _a_quaver.quaver_color = instr2_color; }
-			else if (lock_combo[_i] == obj_GUITAR) { _a_quaver.quaver_color = instr3_color; }
-			else if (lock_combo[_i] == obj_PIANO)  { _a_quaver.quaver_color = instr4_color; }
-		}
-	}
-	
 }
 
 if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave || room == Room_jazzrocksomething) {
@@ -50,7 +35,34 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 				_i--;
 			}
 		}
-		//show_debug_message(string(lock_combo))
+		show_debug_message(string(lock_combo))
+		
+		if (room == Room_SeparateInstrument) {
+			with (obj_button_instr) {
+				instance_destroy();
+			}
+		}
+	}
+	
+	if (instance_number(obj_button_instr) == 0) {
+		for (var _i = 0; _i < lock_length; _i++) {
+			var _clue = noone;
+			if (lock_combo[_i] == obj_BASS) {
+				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue.button_instr = "BASS";
+			} else if (lock_combo[_i] == obj_BRASS) {
+				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue.button_instr = "BRASS";
+			} else if (lock_combo[_i] == obj_GUITAR) {
+				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue.button_instr = "GUITAR";
+			} else if (lock_combo[_i] == obj_PIANO) {
+				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue.button_instr = "PIANO";
+			}
+			
+			show_debug_message(string(lock_combo[_i].object_index) +" "+_clue.button_instr);
+		}
 	}
 }
 

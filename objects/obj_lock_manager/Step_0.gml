@@ -31,9 +31,10 @@ if (obj_room_manager.pause) {
 		obj_room_manager.pause = false;
 		failed = true;
 		audio_play_sound(snd_drum_bad, 1, false);
-    } else {
 	
-	// Start processing an instrument that has not passed
+	} else {
+	
+		// Start processing an instrument that has not passed
 		if (!audio_is_playing(snd_lock_vocals) && !passed) {
 			
 			// If the collected instrument matches the one in the lock combo
