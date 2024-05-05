@@ -50,19 +50,24 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 	}
 	
 	if (instance_number(obj_button_instr) == 0) {
+		
+		var _clue_start = -1;
+		if (lock_length == 3) { _clue_start = obj_door.x-obj_door.sprite_width*0.6; }
+		else { _clue_start = obj_door.x-obj_door.sprite_width; }
+		
 		for (var _i = 0; _i < lock_length; _i++) {
 			var _clue = noone;
 			if (global.combo[_i] == obj_BASS) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "BASS";
 			} else if (global.combo[_i] == obj_BRASS) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "BRASS";
 			} else if (global.combo[_i] == obj_GUITAR) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "GUITAR";
 			} else if (global.combo[_i] == obj_PIANO) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "PIANO";
 			}
 			
