@@ -167,7 +167,9 @@ if room != Room_Lock {
 			landsnd = true
 			alarm[1] = jump_pressed_timer		// saves the key press for some frames
 			//audio_play_sound(snd_jump1, 0, false) //soundid,priority,loop
-		
+			if (!audio_is_playing(snd_jump)) {
+				audio_play_sound(snd_jump, 1, false);
+			}
 		}
 
 		if grounded {							// if player is touching the ground or platform
