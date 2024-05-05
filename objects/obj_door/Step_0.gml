@@ -1,7 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+display_error = false
 if collision_circle(x,y,32,obj_player,true,true) {
+	//Check - if number of held instruments is correct.
+	var _num_instruments = instance_number(obj_instrument);
+	//check collected instrument with lock length
+	var lock_length = 0
+	if room = Room_SeparateInstrument { lock_length = 3; }
+	else { lock_length = 4; }
+	
+	if obj_player.collected != lock_length and room != Room_Tutorial {
+		display_error = true;
+	}
+	else {
+
+	display_error = false
+	
 		audio_stop_all()
 		obj_enemy_manager.instrument_list = ["BASS", "BRASS", "GUITAR", "PIANO"]
 		
@@ -43,6 +57,6 @@ if collision_circle(x,y,32,obj_player,true,true) {
 			global.next_room = Room_SeparateInstrument;
 			room = Room_Lock;
 			}
-	
+	}
 		
 }
