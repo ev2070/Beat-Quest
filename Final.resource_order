@@ -36,6 +36,8 @@
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings":[
+    {"name":"obj_bass_enemy","order":3,"path":"objects/obj_bass_enemy/obj_bass_enemy.yy",},
+    {"name":"obj_brass_enemy","order":4,"path":"objects/obj_brass_enemy/obj_brass_enemy.yy",},
     {"name":"obj_BRASS","order":7,"path":"objects/obj_BRASS/obj_BRASS.yy",},
     {"name":"obj_button_instr","order":2,"path":"objects/obj_button_instr/obj_button_instr.yy",},
     {"name":"obj_button_key","order":4,"path":"objects/obj_button_key/obj_button_key.yy",},
@@ -56,6 +58,8 @@
     {"name":"obJ_music_manager2","order":4,"path":"objects/obJ_music_manager2/obJ_music_manager2.yy",},
     {"name":"obj_music_piece","order":2,"path":"objects/obj_music_piece/obj_music_piece.yy",},
     {"name":"obj_open_door","order":13,"path":"objects/obj_open_door/obj_open_door.yy",},
+    {"name":"obj_piano_enemy","order":5,"path":"objects/obj_piano_enemy/obj_piano_enemy.yy",},
+    {"name":"obj_guitar_enemy","order":6,"path":"objects/obj_guitar_enemy/obj_guitar_enemy.yy",},
     {"name":"obj_PIANO","order":2,"path":"objects/obj_PIANO/obj_PIANO.yy",},
     {"name":"obj_platform","order":11,"path":"objects/obj_platform/obj_platform.yy",},
     {"name":"obj_play_button","order":5,"path":"objects/obj_play_button/obj_play_button.yy",},
