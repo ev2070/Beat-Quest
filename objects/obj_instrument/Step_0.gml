@@ -1,5 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+//Bounce back after hitting the wall/obstacle
+if collision_circle(x,y,20,obj_platform,false,false) and !following and !returning {
+	audio_play_sound(snd_bounce,0,0)
+	if move_dir = "right" {
+		move_dir = "left"
+	}
+	else if move_dir = "left" {
+		move_dir = "right" 
+	}
+	
+}
 
 if collision_circle(x,y,16, obj_player,true,true) and pickup_timer = 0 and following = false// and keyboard_check_pressed(vk_space)
 {
@@ -25,9 +36,8 @@ if release_timer > 0 {
 
 
 if following {
+	
 	returning = false
-	//x = obj_player.xprevious + x_offset
-	//y = obj_player.yprevious + y_offset
 	distance_counter = 0
 	
 	if room != Room_Lock {
@@ -60,6 +70,12 @@ if following {
 		image_yscale = 1.4;
 	}
 	instrument_on = true
+	
+	if collision_circle(x,y,20,obj_platform,false,false) and following {
+	x = xprevious
+	y = yprevious
+	}
+	
 }
 else {
 	image_xscale = 1
@@ -69,8 +85,9 @@ else {
 
 
 if keyboard_check_pressed(vk_space) and following = true and release_timer = 0 
-and !collision_circle(x,y,30,obj_collidable,true,false)
+//and !collision_circle(x,y,30,obj_collidable,true,false)
 {
+	
 	returning = false
 	if (room != Room_Lock) {
 		
@@ -107,37 +124,6 @@ if x > room_width + 50{
 if x < -50 {
 	x = room_width - 10
 }
-
-//projectile moves a  set distance 
-//if it never collides with anything?
-/*
-if distance_counter > 100 {
-	move_spd = lerp(move_spd, 0, 0.5)
-}
-if move_spd = 0 {
-	released = false
-	move_spd = 30
-	distance_counter = 0
-}*/
-
-//Bounce back after hitting the wall/obstacle
-if collision_circle(x,y,20,obj_platform,false,false) and !following and !returning {
-	audio_play_sound(snd_bounce,0,0)
-	if move_dir = "right" {
-		move_dir = "left"
-	}
-	else if move_dir = "left" {
-		move_dir = "right" 
-	}
-	
-}
-
-else if collision_circle(x,y,20,obj_platform,false,false) and following {
-	x = xprevious
-	y = yprevious
-}
-
-
 if (room == Room_Lock) {
 	if (visible && x >= obj_open_door.x) {
 		visible = false;
