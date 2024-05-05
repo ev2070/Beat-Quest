@@ -1,5 +1,9 @@
 // obj_lock_manager Draw event
 
+//if (obj_player.x > obj_open_door.x-obj_open_door.sprite_width*0.55) {
+//	draw_text(obj_open_door.x-obj_open_door.sprite_width*0.55,50,"hello");
+//}
+
 if (room == Room_Lock) {
 	/*
 	//////// Display room graphics

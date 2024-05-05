@@ -11,8 +11,11 @@ if (room == Room_Lock) {
 	depth = -2;
 	x = clamp(x, 0, room_width*1.5);
 	
-	x += move_spd
+	if (!obj_room_manager.pause) {
+		x += move_spd
+	}
 	move_dir = "right"
+	sprite_index = spr_walk_right
 	
 	if (visible && x >= obj_open_door.x) {
 		visible = false;

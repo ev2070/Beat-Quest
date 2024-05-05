@@ -18,3 +18,5 @@ instr1_color = #EE1C24; // "red"
 instr2_color = #0039FF; // "blue"
 instr3_color = #FFF000; // "yellow"
 instr4_color = #00E56F; // "green"
+
+pause = false;

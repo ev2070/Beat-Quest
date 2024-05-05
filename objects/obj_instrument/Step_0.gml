@@ -39,14 +39,16 @@ if following {
 			}
 		y = lerp(y,obj_player.yprevious-60, 0.3)
 	} else {
-		if obj_player.move_dir = "right" { 
-			x = lerp(x, obj_player.xprevious - (position_num * 110), 0.3);
-			x = clamp(x,-50,room_width+30)
-			}
-		else if obj_player.move_dir = "left" {
-			x = lerp(x,obj_player.xprevious + (position_num * 110), 0.3);
-			}
-		y = lerp(y,obj_player.yprevious-120, 0.3)
+		if (!obj_room_manager.pause) {
+			if obj_player.move_dir = "right" { 
+				x = lerp(x, obj_player.xprevious - (position_num * 200), 0.3);
+				x = clamp(x,-50,room_width+30)
+				}
+			else if obj_player.move_dir = "left" {
+				x = lerp(x,obj_player.xprevious + (position_num * 200), 0.3);
+				}
+			y = lerp(y,obj_player.yprevious-120, 0.3)
+		}
 	}
 	
 	if room != Room_Lock {
@@ -137,6 +139,10 @@ if (room == Room_Lock) {
 		visible = false;
 	} else if (!visible && x < obj_open_door.x) {
 		visible = true;
+	}
+	
+	if (x >= obj_open_door.x-obj_open_door.sprite_width*0.5) {
+		obj_room_manager.pause = true;
 	}
 }
 

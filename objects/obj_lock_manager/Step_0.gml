@@ -19,8 +19,7 @@ if (instance_number(obj_instrument) < array_length(obj_room_manager.collected_in
 		obj_player.collected += 1
 		_instr_instance.position_num = obj_player.collected
 		_instr_instance.collided = true
-		obj_player.move_dir = "right" // Default move_dir
-		// _instr_instance.instrument_on = true; // must create if statements for this
+		// obj_player.move_dir = "right" // Set in obj_player
 	}
 }
 

@@ -2,6 +2,8 @@
 
 randomize();
 
+curr_index = 0;
+
 /*
 curr_button = noone; // What is the current button?
 curr_button_index = 0; // A pointer
