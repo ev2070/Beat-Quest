@@ -1,5 +1,12 @@
 // obj_room_manager Step event
 
+if (room == Room_Title) {
+	if (keyboard_check_pressed(vk_enter)){
+		room_goto(Room_Tutorial)
+	}
+}
+
+
 // obj_player can move left or right to return back to previous room
 if (room == Room_Lock) {
 	
