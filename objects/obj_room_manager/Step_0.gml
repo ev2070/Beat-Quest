@@ -3,7 +3,7 @@
 // obj_player can move left or right to return back to previous room
 if (room == Room_Lock) {
 	
-	if (obj_player.x < 0 || obj_player.x > room_width) {
+	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
 		audio_stop_all();
 	    room = global.prev_room;
 		returning = true;

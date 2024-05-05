@@ -9,29 +9,14 @@ if !dead {
 if (room == Room_Lock) {
 	
 	depth = -2;
-	x = clamp(x, -sprite_width, room_width-sprite_width*0.4);
+	x = clamp(x, 0, room_width*1.5);
 	
-	if keyboard_check(ord("D")) {
-		x += move_spd*2
-		move_dir = "right"
-		
+	x += move_spd
+	move_dir = "right"
+	
+	if (x == obj_open_door.x) {
+		visible = false;
 	}
-	if keyboard_check(ord("A")) {
-		x -= move_spd*2
-		move_dir = "left"
-		
-	}
-	if keyboard_check(vk_right) {
-		x += move_spd*2
-		move_dir = "right"
-		
-	}
-	if keyboard_check(vk_left) {
-		x -= move_spd*2
-		move_dir = "left"
-		
-	}
-
 
 
 } else {
