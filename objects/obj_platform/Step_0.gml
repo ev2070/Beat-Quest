@@ -9,4 +9,7 @@ else if room = Room_jazzrocksomething {
 else if room = Room_Rave {
 	sprite_index = spr_rave_platform
 }
+else if room = Room_Tutorial{
+	sprite_index = spr_park_platform
+}
 else sprite_index = spr_temp_platform
