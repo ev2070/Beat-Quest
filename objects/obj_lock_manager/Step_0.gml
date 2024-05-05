@@ -28,8 +28,8 @@ if (obj_room_manager.pause) {
 	
 	// Check if processing is allowed
 	if (!(curr_index < combo_length && curr_index < collected_length)) {
-        obj_room_manager.pause = false;
-        failed = true;
+		obj_room_manager.pause = false;
+		failed = true;
 		audio_play_sound(snd_drum_bad, 1, false);
     } else {
 	
