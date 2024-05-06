@@ -54,7 +54,7 @@ if collision_circle(x,y,32,obj_player,true,true) {
 		if room = Room_jazzrocksomething { 
 			draw_text(100,100,"rock")
 			global.prev_room = Room_jazzrocksomething;
-			global.next_room = Room_SeparateInstrument;
+			global.next_room = Room_End;
 			room = Room_Lock;
 			}
 	}

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 draw_self()
 //draw_text(x,y+50,collected)
-draw_text(x,y,x)
+//draw_text(x,y,x)
 //draw_text(x,y-200,start_x)
 //draw_text(x+20,y,y)
 //draw_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom,false);

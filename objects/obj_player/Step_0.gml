@@ -5,7 +5,7 @@ previous_x = x
 previous_y = y
 
 
-if !dead {
+if !dead and room != Room_End {
 if (room == Room_Lock) {
 	
 	depth = -2;
