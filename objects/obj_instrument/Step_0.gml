@@ -139,7 +139,7 @@ if (room == Room_Lock) {
 	}
 	
 	// If this instrument is being processed and it's correct, spawn semiquavers
-	if (audio_is_playing(snd_lock_vocals) && object_index == global.combo[obj_lock_manager.curr_index]) {
+	if (audio_is_playing(snd_drum_good) && object_index == global.combo[obj_lock_manager.curr_index]) {
 		var _radius = 100;
 		var _angle = random_range(0, 360);
 		var _note_x = x + lengthdir_x(_radius, _angle);

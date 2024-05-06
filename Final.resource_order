@@ -119,6 +119,7 @@
     {"name":"snd_rave_drums","order":2,"path":"sounds/snd_rave_drums/snd_rave_drums.yy",},
     {"name":"snd_rave_voice","order":4,"path":"sounds/snd_rave_voice/snd_rave_voice.yy",},
     {"name":"snd_throw","order":1,"path":"sounds/snd_throw/snd_throw.yy",},
+    {"name":"snd_drum_good","order":12,"path":"sounds/snd_drum_good/snd_drum_good.yy",},
     {"name":"back","order":2,"path":"sprites/back/back.yy",},
     {"name":"button2","order":1,"path":"sprites/button2/button2.yy",},
     {"name":"button3","order":2,"path":"sprites/button3/button3.yy",},
@@ -144,6 +145,7 @@
     {"name":"spr_floor","order":24,"path":"sprites/spr_floor/spr_floor.yy",},
     {"name":"spr_guitar","order":4,"path":"sprites/spr_guitar/spr_guitar.yy",},
     {"name":"spr_idle","order":2,"path":"sprites/spr_idle/spr_idle.yy",},
+    {"name":"spr_instr","order":35,"path":"sprites/spr_instr/spr_instr.yy",},
     {"name":"spr_menu","order":31,"path":"sprites/spr_menu/spr_menu.yy",},
     {"name":"spr_music_note2","order":1,"path":"sprites/spr_music_note2/spr_music_note2.yy",},
     {"name":"spr_music_note3","order":2,"path":"sprites/spr_music_note3/spr_music_note3.yy",},
@@ -170,7 +172,6 @@
     {"name":"Sprite40","order":19,"path":"sprites/Sprite40/Sprite40.yy",},
     {"name":"Sprite52","order":28,"path":"sprites/Sprite52/Sprite52.yy",},
     {"name":"Sprite62","order":34,"path":"sprites/Sprite62/Sprite62.yy",},
-    {"name":"spr_instr","order":35,"path":"sprites/spr_instr/spr_instr.yy",},
     {"name":"Sprite9","order":8,"path":"sprites/Sprite9/Sprite9.yy",},
   ],
 }

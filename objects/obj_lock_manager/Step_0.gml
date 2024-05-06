@@ -37,7 +37,7 @@ if (room == Room_Lock) {
 		} else {
 	
 			// Start processing an instrument that has not passed
-			if (!audio_is_playing(snd_lock_vocals) && !passed) {
+			if (!audio_is_playing(snd_drum_good) && !passed) {
 			
 				// If the collected instrument matches the one in the lock combo
 				// play correct SFX and set pass.
@@ -47,7 +47,7 @@ if (room == Room_Lock) {
 			
 				if (_curr_collected_instr == _curr_correct_instr) {
 				
-					audio_play_sound(snd_lock_vocals,1,false);
+					audio_play_sound(snd_drum_good,1,false);
 					passed = true;
 					if (combo_length == collected_length && curr_index == array_length(global.combo)-1) {
 						succeeded = true;
@@ -63,13 +63,13 @@ if (room == Room_Lock) {
 		
 			// If the player has passed part of the lock combo but not finished it,
 			// processing will continue
-			} else if (!audio_is_playing(snd_lock_vocals) && passed && !succeeded) {
+			} else if (!audio_is_playing(snd_drum_good) && passed && !succeeded) {
 				passed = false;
 				obj_room_manager.pause = false;
 				curr_index++;
 			
 			// If the player has succeeded, they will unlock the next room
-			} else if (!audio_is_playing(snd_lock_vocals) && passed && succeeded) {
+			} else if (!audio_is_playing(snd_drum_good) && passed && succeeded) {
 				obj_room_manager.pause = false;
 			}
 		}

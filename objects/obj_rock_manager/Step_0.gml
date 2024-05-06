@@ -1,4 +1,5 @@
 
+if (room != Room_Lock) {
 	audio_sound_gain(rock_guitar,0,0.1)
 	audio_sound_gain(rock_bass,0,0.1)
 	audio_sound_gain(rock_organpiano,0,0.1)
@@ -15,6 +16,15 @@
 	if instance_exists(obj_BASS) and obj_BASS.instrument_on {
 		audio_sound_gain(rock_bass,1,0.1)
 	}
+} else {
+	if (global.prev_room == Room_jazzrocksomething) {
+		audio_play_sound(rock_bass,0.4,2)
+		audio_play_sound(rock_drum,0.4,2)
+		audio_play_sound(rock_guitar,0.4,2)
+		audio_play_sound(rock_organpiano,0.4,2)
+		audio_play_sound(rocksong_trumpet,0.4,2)
+	}
+}
 
 
 if keyboard_check_pressed(vk_enter) {

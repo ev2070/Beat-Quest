@@ -40,7 +40,7 @@ if (room == Room_Lock) {
 	
 	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
 		
-		if (!audio_is_playing(snd_lock_vocals) && obj_lock_manager.passed && obj_lock_manager.succeeded) {
+		if (!audio_is_playing(snd_drum_good) && obj_lock_manager.passed && obj_lock_manager.succeeded) {
 			audio_stop_all();
 			ResetStateArrays(1,1,1);
 			room = global.next_room;
