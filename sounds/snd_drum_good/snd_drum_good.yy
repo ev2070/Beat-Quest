@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_drum_good",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.390083,
+  "name":"snd_drum_good",
+  "parent":{
+    "name":"Lock Sounds",
+    "path":"folders/Sounds/Lock Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_drum_good.ogg",
+  "type":0,
+  "volume":1.0,
+}
