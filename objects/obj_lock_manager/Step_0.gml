@@ -30,7 +30,6 @@ if (room == Room_Lock) {
 	
 		// Check if processing is allowed
 		if (!(curr_index < combo_length && curr_index < collected_length)) {
-			show_debug_message("processing not allowed");
 			obj_room_manager.pause = false;
 			failed = true;
 			audio_play_sound(snd_drum_bad, 1, false);
@@ -51,14 +50,12 @@ if (room == Room_Lock) {
 					audio_play_sound(snd_lock_vocals,1,false);
 					passed = true;
 					if (combo_length == collected_length && curr_index == array_length(global.combo)-1) {
-						show_debug_message("succeeded set");
 						succeeded = true;
 					}
 			
 				// If the collected instrument does not match the one in the lock combo,
 				// the player failed to unlock the next room
 				} else {
-					show_debug_message("wrong instr");
 					obj_room_manager.pause = false;
 					failed = true;
 					audio_play_sound(snd_drum_bad, 1, false);
@@ -74,10 +71,6 @@ if (room == Room_Lock) {
 			// If the player has succeeded, they will unlock the next room
 			} else if (!audio_is_playing(snd_lock_vocals) && passed && succeeded) {
 				obj_room_manager.pause = false;
-				show_debug_message("succeeded");
-				audio_stop_all();
-				ResetStateArrays(1,1,1);
-				room = global.next_room;
 			}
 		}
 	}

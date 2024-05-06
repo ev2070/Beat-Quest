@@ -15,9 +15,16 @@ if (room == Room_Instructions) {
 if (room == Room_Lock) {
 	
 	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
-		audio_stop_all();
-	    room = global.prev_room;
-		returning = true;
+		
+		if (!audio_is_playing(snd_lock_vocals) && obj_lock_manager.passed && obj_lock_manager.succeeded) {
+			audio_stop_all();
+			ResetStateArrays(1,1,1);
+			room = global.next_room;
+		} else {
+			audio_stop_all();
+			room = global.prev_room;
+			returning = true;
+		}
 	}
 	
 }
@@ -45,8 +52,7 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 			} else { // Stay on this index otherwise
 				_i--;
 			}
-		}		
-		show_debug_message(string(global.combo))
+		}
 	}
 	
 	if (instance_number(obj_button_instr) == 0) {
@@ -70,8 +76,6 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "PIANO";
 			}
-			
-			show_debug_message(string(global.combo[_i].object_index) +" "+_clue.button_instr);
 		}
 	}
 }

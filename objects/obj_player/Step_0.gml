@@ -11,7 +11,12 @@ if (room == Room_Lock) {
 	depth = -2;
 	x = clamp(x, 0, room_width*1.5);
 	
-	if (!obj_room_manager.pause && !obj_lock_manager.failed) {
+	if (!audio_is_playing(snd_lock_vocals) && obj_lock_manager.passed && obj_lock_manager.succeeded) {
+		x += move_spd*1.5
+		move_dir = "right"
+		sprite_index = spr_walk_right
+	}
+	else if (!obj_room_manager.pause && !obj_lock_manager.failed) {
 		x += move_spd
 		move_dir = "right"
 		sprite_index = spr_walk_right
@@ -21,7 +26,6 @@ if (room == Room_Lock) {
 		move_dir = "left"
 		sprite_index = spr_walk_left
 	}
-	
 	if (visible && x >= obj_open_door.x) {
 		visible = false;
 		
