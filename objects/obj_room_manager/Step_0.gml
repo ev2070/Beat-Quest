@@ -12,23 +12,7 @@ if (room == Room_Instructions) {
 	}
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-// obj_player can move left or right to return back to previous room
-=======
->>>>>>> b713aef0475212d01a5959af6cb25901a0269908
 if (room == Room_Lock) {
-	
-	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
-		audio_stop_all();
-	    room = global.prev_room;
-		returning = true;
-	}
 	
 	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
 		audio_stop_all();

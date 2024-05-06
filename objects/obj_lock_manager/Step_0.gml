@@ -11,7 +11,7 @@ if (room == Room_Lock) {
 	// Create instances of the collected instruments
 	if (instance_number(obj_instrument) < collected_length) {
 		for (var _i = 0; _i < collected_length; _i++) {
-			var _instr_instance = instance_create_depth(0, 0, -1, obj_room_manager.collected_instruments[_i]);
+			var _instr_instance = instance_create_depth(0, obj_player.y, -1, obj_room_manager.collected_instruments[_i]);
 		
 			// Set following behavior
 			_instr_instance.following = true
@@ -73,6 +73,7 @@ if (room == Room_Lock) {
 			
 			// If the player has succeeded, they will unlock the next room
 			} else if (!audio_is_playing(snd_lock_vocals) && passed && succeeded) {
+				obj_room_manager.pause = false;
 				show_debug_message("succeeded");
 				audio_stop_all();
 				ResetStateArrays(1,1,1);
