@@ -1,13 +1,27 @@
 // obj_room_manager Step event
 
 if (room == Room_Title) {
+	if !audio_is_playing(happysong_drums) and !audio_is_playing(happysong_piano){
+		audio_play_sound(happysong_drums,0,0)
+		audio_play_sound(happysong_piano,0,0)
+		audio_play_sound(happysong_trumpet,0,0)
+		
+	   audio_sound_gain(happysong_trumpet,0,0.1)
+	
+	}
 	if (keyboard_check_pressed(vk_enter)){
 		room_goto(Room_Instructions)
+		audio_play_sound(snd_enemy_hit,0,0)
+		
 	}
 }
 
 if (room == Room_Instructions) {
+	audio_sound_gain(happysong_trumpet,1,0.1)
+	
 	if (keyboard_check_pressed(vk_enter)){
+		audio_stop_all()
+		audio_play_sound(snd_enemy_hit,0,0)
 		room_goto(Room_Tutorial)
 	}
 }
