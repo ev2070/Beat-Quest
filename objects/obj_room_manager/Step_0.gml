@@ -16,6 +16,12 @@ if (room == Room_Title) {
 	}
 }
 
+if (room == Room_End) {
+	if (keyboard_check_pressed(vk_enter)){
+		room_goto(Room_Title)
+	}
+}
+
 if (room == Room_Instructions) {
 	audio_sound_gain(happysong_trumpet,1,0.1)
 	
