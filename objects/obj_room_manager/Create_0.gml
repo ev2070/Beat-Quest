@@ -10,7 +10,7 @@ enemies = [];
 
 randomize();
 instrs = [obj_BASS, obj_BRASS, obj_GUITAR, obj_PIANO];
-lock_combo = [];
+global.combo = [];
 lock_length = 0;
 
 quaver_start = 0;

@@ -93,8 +93,8 @@ if keyboard_check_pressed(vk_space) and following = true and release_timer = 0
 		
 		if position_num = 1 {
 			audio_play_sound(snd_throw,0,0)
-		release_timer = release_timer_max
-		move_dir = obj_player.move_dir
+			release_timer = release_timer_max
+			move_dir = obj_player.move_dir
 			released = true
 			following = false
 			instrument_on = false
@@ -139,7 +139,7 @@ if (room == Room_Lock) {
 	}
 	
 	// If this instrument is being processed and it's correct, spawn semiquavers
-	if (audio_is_playing(snd_lock_vocals) && object_index == obj_room_manager.lock_combo[obj_lock_manager.curr_index]) {
+	if (audio_is_playing(snd_lock_vocals) && object_index == global.combo[obj_lock_manager.curr_index]) {
 		var _radius = 100;
 		var _angle = random_range(0, 360);
 		var _note_x = x + lengthdir_x(_radius, _angle);

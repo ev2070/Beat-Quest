@@ -5,7 +5,7 @@ function ResetStateArrays(_resetCollectedInstruments, _resetEnemies, _resetCombo
 	if (_resetEnemies) { obj_room_manager.enemies = []; }
 	
 	if (_resetCombo) {
-		obj_room_manager.lock_combo = [];
+		global.combo = [];
 		obj_room_manager.lock_length = 0;
 	}
 }

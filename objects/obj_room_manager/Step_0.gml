@@ -12,6 +12,7 @@ if (room == Room_Instructions) {
 	}
 }
 
+<<<<<<< HEAD
 
 
 
@@ -19,7 +20,15 @@ if (room == Room_Instructions) {
 
 
 // obj_player can move left or right to return back to previous room
+=======
+>>>>>>> b713aef0475212d01a5959af6cb25901a0269908
 if (room == Room_Lock) {
+	
+	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
+		audio_stop_all();
+	    room = global.prev_room;
+		returning = true;
+	}
 	
 	if (obj_player.x < 0 || obj_player.x > room_width*1.5) {
 		audio_stop_all();
@@ -31,7 +40,7 @@ if (room == Room_Lock) {
 
 if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave || room == Room_jazzrocksomething) {
 
-	if (array_length(lock_combo) == 0 && lock_length == 0) {
+	if (array_length(global.combo) == 0 && lock_length == 0) {
 		
 		// Set length of the lock combo appropriately
 		if (room == Room_SeparateInstrument) {
@@ -47,39 +56,38 @@ if (room == Room_SeparateInstrument || room == Room_Disco || room == Room_Rave |
 		// Generate a random lock combo
 		for (var _i = 0; _i < lock_length; _i++) {
 			var _rand_instr = instrs[irandom_range(0,3)];
-			if (!array_contains(lock_combo,_rand_instr)) { // Prevents repeats
-				lock_combo[_i] = _rand_instr;
+			if (!array_contains(global.combo,_rand_instr)) { // Prevents repeats
+				global.combo[_i] = _rand_instr;
 			} else { // Stay on this index otherwise
 				_i--;
 			}
-		}
-		show_debug_message(string(lock_combo))
-		
-		if (room == Room_SeparateInstrument) {
-			with (obj_button_instr) {
-				instance_destroy();
-			}
-		}
+		}		
+		show_debug_message(string(global.combo))
 	}
 	
 	if (instance_number(obj_button_instr) == 0) {
+		
+		var _clue_start = -1;
+		if (lock_length == 3) { _clue_start = obj_door.x-obj_door.sprite_width*0.6; }
+		else { _clue_start = obj_door.x-obj_door.sprite_width; }
+		
 		for (var _i = 0; _i < lock_length; _i++) {
 			var _clue = noone;
-			if (lock_combo[_i] == obj_BASS) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+			if (global.combo[_i] == obj_BASS) {
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "BASS";
-			} else if (lock_combo[_i] == obj_BRASS) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+			} else if (global.combo[_i] == obj_BRASS) {
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "BRASS";
-			} else if (lock_combo[_i] == obj_GUITAR) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+			} else if (global.combo[_i] == obj_GUITAR) {
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "GUITAR";
-			} else if (lock_combo[_i] == obj_PIANO) {
-				_clue = instance_create_depth(obj_door.x+(_i*32), obj_door.y-obj_door.sprite_height-16, -1, obj_button_instr);
+			} else if (global.combo[_i] == obj_PIANO) {
+				_clue = instance_create_depth(_clue_start+(_i*64), obj_door.y-obj_door.sprite_height/2, -1, obj_button_instr);
 				_clue.button_instr = "PIANO";
 			}
 			
-			show_debug_message(string(lock_combo[_i].object_index) +" "+_clue.button_instr);
+			show_debug_message(string(global.combo[_i].object_index) +" "+_clue.button_instr);
 		}
 	}
 }
@@ -99,6 +107,7 @@ if (returning && array_length(collected_instruments) > 0 && room != Room_Lock) {
                 obj_player.collected += 1;
                 _instr_instance.position_num = obj_player.collected;
                 _instr_instance.collided = true;
+				_instr_instance.returning = false;
                 obj_player.move_dir = "left";
                 _instr_instance.instrument_on = true;
             }
