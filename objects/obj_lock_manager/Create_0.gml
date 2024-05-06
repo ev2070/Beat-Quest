@@ -1,5 +1,8 @@
 // obj_lock_manager Create event
 
+background_layer = layer_get_id("Background");
+
+background = layer_background_get_id(background_layer);
 randomize();
 
 curr_index = 0;

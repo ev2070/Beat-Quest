@@ -5,6 +5,19 @@
 //}
 
 if (room == Room_Lock) {
+	
+	if global.prev_room = Room_SeparateInstrument {
+        layer_background_sprite(background, spr_bg_park);
+    }
+    else if global.prev_room = Room_Disco {
+        layer_background_sprite(background, back);
+    }
+    else if global.prev_room = Room_Rave {
+        layer_background_sprite(background, spr_bg);
+    }
+    else if global.prev_room = Room_jazzrocksomething {
+        layer_background_sprite(background, jazz_bg);
+    }
 	/*
 	//////// Display room graphics
 	
