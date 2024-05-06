@@ -16,13 +16,15 @@ if (room != Room_Lock) {
 	if instance_exists(obj_BASS) and obj_BASS.instrument_on {
 		audio_sound_gain(snd_rave_bass,1,0.1)
 	}
-} else {
+} 
+else {
+	
 	if (global.prev_room == Room_Rave) {
-		audio_play_sound(snd_rave_brass,0.4,2)
-		audio_play_sound(snd_rave_bass,0.4,2)
-		audio_play_sound(snd_rave_chord,0.4,2)
-		audio_play_sound(snd_rave_voice,0.4,2)
-		audio_play_sound(snd_rave_drums,0.4,2)
+		audio_sound_gain(snd_rave_brass,0.4,2)
+		audio_sound_gain(snd_rave_bass,0.4,2)
+		audio_sound_gain(snd_rave_chord,0.4,2)
+		audio_sound_gain(snd_rave_voice,0.4,2)
+		audio_sound_gain(snd_rave_drums,0.4,2)
 	}
 }
 

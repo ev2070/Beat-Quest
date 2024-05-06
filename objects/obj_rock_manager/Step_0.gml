@@ -18,11 +18,11 @@ if (room != Room_Lock) {
 	}
 } else {
 	if (global.prev_room == Room_jazzrocksomething) {
-		audio_play_sound(rock_bass,0.4,2)
-		audio_play_sound(rock_drum,0.4,2)
-		audio_play_sound(rock_guitar,0.4,2)
-		audio_play_sound(rock_organpiano,0.4,2)
-		audio_play_sound(rocksong_trumpet,0.4,2)
+		audio_sound_gain(rock_bass,0.4,2)
+		audio_sound_gain(rock_drum,0.4,2)
+		audio_sound_gain(rock_guitar,0.4,2)
+		audio_sound_gain(rock_organpiano,0.4,2)
+		audio_sound_gain(rocksong_trumpet,0.4,2)
 	}
 }
 
