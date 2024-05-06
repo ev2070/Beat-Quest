@@ -44,25 +44,9 @@ if (room == Room_Lock) {
 } else {
 	x = clamp(x,0,room_width)
 	y = clamp(y,0,room_height)
-	if keyboard_check(ord("W")) {
-		y -= move_spd
-	}
-	if keyboard_check(ord("S")) {
-		y += move_spd
-	}
-	if keyboard_check(ord("D")) {
-		x += move_spd
-		sprite_index = spr_walk_right
-		
-	}
-	if keyboard_check(ord("A")) {
-		x -= move_spd
-		sprite_index = spr_walk_left
-	}
 
 
-
-	if keyboard_check(vk_up) {
+	if keyboard_check(vk_up)  {
 		//JUMPING
 		y -= move_spd
 	}
